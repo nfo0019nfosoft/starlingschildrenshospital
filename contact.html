@@ -167,3 +167,308 @@
 
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section">
+
+    <div class="contact-card">
+
+        <div class="top-content">
+
+            <!-- LEFT -->
+
+            <div class="contact-left">
+
+                <h2>
+                    Take Care of Your Health —
+               
+                    and Your Family’s — Today!
+                </h2>
+
+                <div class="info-grid">
+
+                    <div class="info-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <h4>Address Business</h4>
+                            <p>
+                               Sindhi Colony, Begumpet, Secunderabad,
+Hyderabad, Telangana
+500003
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <h4>Contact With Us</h4>
+                            <p>+91 90638 37117</p>
+                            <p>+91 90638 37116</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>starlings.hyd@gmail.com</p>
+                            <p>birthstories.hyd@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="icon">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <h4>Working Time</h4>
+                            <p>24/7</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="contact-right">
+<form id="appointmentForm">
+
+    <input type="text" id="name" placeholder="Full Name">
+
+    <select id="treatment">
+        <option value="">Select Treatment</option>
+        <option>Child Care & Pediatric Consultation</option>
+                        <option>Newborn & Infant Care</option>
+                        <option>Child Vaccination / Immunization</option>
+                        <option>Pregnancy & Maternity Care</option>
+                         <option>Women's Health & Gynecology Care</option>
+    </select>
+
+    <button type="submit" class="appointment-btn">
+        <i class="fa-solid fa-check"></i>
+        <span>Complete</span>
+        <span>Appointment</span>
+    </button>
+
+    <input type="email" id="email" placeholder="Email Address">
+
+    <select id="doctor">
+        <option value="">Choose Doctor</option>
+       <option>Dr. Deepa Ganji</option>
+                        <option>Dr. Hrudayaranjan</option>
+    </select>
+
+    <input type="tel" id="phone" placeholder="Phone Number">
+
+    <input type="date" id="date">
+
+</form>
+
+            </div>
+
+        </div>
+
+        <!-- MAP -->
+
+        <div class="map-box">
+
+           <iframe
+src="https://maps.google.com/maps?q=Starlings%20Children%20Hospital%20Begumpet%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    
+
+
+document.getElementById("appointmentForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let treatment = document.getElementById("treatment").value;
+    let doctor = document.getElementById("doctor").value;
+    let date = document.getElementById("date").value;
+
+    // Validation
+
+    if(name === ""){
+        alert("Please enter your full name");
+        return;
+    }
+
+    if(email === ""){
+        alert("Please enter your email");
+        return;
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    if(phone === ""){
+        alert("Please enter your phone number");
+        return;
+    }
+
+    if(phone.length < 10){
+        alert("Please enter a valid phone number");
+        return;
+    }
+
+    if(treatment === ""){
+        alert("Please select a treatment");
+        return;
+    }
+
+    if(doctor === ""){
+        alert("Please choose a doctor");
+        return;
+    }
+
+    if(date === ""){
+        alert("Please select a date");
+        return;
+    }
+
+    // WhatsApp Message
+
+    let message =
+`*New Appointment Booking*
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+📱 Phone: ${phone}
+
+🏥 Treatment: ${treatment}
+
+👨‍⚕️ Doctor: ${doctor}
+
+📅 Appointment Date: ${date}`;
+
+    let whatsappURL =
+    `https://wa.me/919063837117?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="support-section">
+
+    <div class="support-grid">
+
+        <!-- Card 1 -->
+
+        <div class="support-card">
+
+            <img src="images/contact2.png" alt="Support">
+
+            <div class="card-overlay"></div>
+
+            <div class="support-content">
+
+                <div class="support-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+
+                <h3>Telephone Support</h3>
+
+                <p>Call us 24/7 Support</p>
+
+                <p>+91 90638 37117 | +91 90638 37116</p>
+
+                <p>Mail Us: starlings.hyd@gmail.com</p>
+
+                <a href="tel:+919063837116" class="support-btn">
+                    24/7 Call Support
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="support-card">
+
+            <img src="images/contact3.png" alt="Appointment">
+
+            <div class="card-overlay"></div>
+
+            <div class="support-content">
+
+                <div class="support-icon">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+
+                <h3>Book An Appointment</h3>
+
+                <p>
+                    Make an appointment with us at the
+                    nearest facility to directly examine
+                    your health.
+                </p>
+
+                <a href="contact.html" class="support-btn">
+                    Book An Appointment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
