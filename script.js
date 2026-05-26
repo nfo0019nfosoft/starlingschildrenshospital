@@ -66,7 +66,7 @@ Doctor: ${doctor}
 Date: ${date}`;
 
 window.open(
-`https://wa.me/918074586016?text=${encodeURIComponent(msg)}`,
+`https://wa.me/919063837117?text=${encodeURIComponent(msg)}`,
 "_blank"
 );
 
