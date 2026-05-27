@@ -1,22 +1,52 @@
 const menuBtn = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const navMenu = document.querySelector(".nav-links");
 
-// Mobile Menu Toggle
-if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-}
+/* Menu Toggle */
 
-// Mobile Dropdown Toggle
-document.querySelectorAll(".dropdown > a").forEach(item => {
-    item.addEventListener("click", function (e) {
-        if (window.innerWidth <= 992) {
-            e.preventDefault();
-            this.parentElement.classList.toggle("active");
-        }
-    });
+menuBtn.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+    const icon = menuBtn.querySelector("i");
+
+    if(navMenu.classList.contains("active")){
+        icon.classList.replace("fa-bars","fa-times");
+    }else{
+        icon.classList.replace("fa-times","fa-bars");
+    }
+
 });
+
+/* Mobile Dropdown */
+
+document.querySelectorAll(".dropdown > a").forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        if(window.innerWidth <= 992){
+
+            e.preventDefault();
+
+            const currentDropdown = this.closest(".dropdown");
+
+            // Close all other dropdowns
+            document.querySelectorAll(".dropdown").forEach(dropdown => {
+
+                if(dropdown !== currentDropdown){
+                    dropdown.classList.remove("active");
+                }
+
+            });
+
+            // Toggle current dropdown
+            currentDropdown.classList.toggle("active");
+        }
+
+    });
+
+});
+
+
 
 // AOS
 AOS.init({
@@ -231,6 +261,7 @@ new Swiper(".reviewSwiper", {
 
 
 
+
 document.querySelectorAll('.read-more-btn').forEach(button => {
 
     button.addEventListener('click', function(){
@@ -257,3 +288,84 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
 
 
 
+
+
+
+document.getElementById("appointmentForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let treatment = document.getElementById("treatment").value;
+    let doctor = document.getElementById("doctor").value;
+    let date = document.getElementById("date").value;
+
+    // Validation
+
+    if(name === ""){
+        alert("Please enter your full name");
+        return;
+    }
+
+    if(email === ""){
+        alert("Please enter your email");
+        return;
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    if(phone === ""){
+        alert("Please enter your phone number");
+        return;
+    }
+
+    if(phone.length < 10){
+        alert("Please enter a valid phone number");
+        return;
+    }
+
+    if(treatment === ""){
+        alert("Please select a treatment");
+        return;
+    }
+
+    if(doctor === ""){
+        alert("Please choose a doctor");
+        return;
+    }
+
+    if(date === ""){
+        alert("Please select a date");
+        return;
+    }
+
+    // WhatsApp Message
+
+    let message =
+`*New Appointment Booking*
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+📱 Phone: ${phone}
+
+🏥 Treatment: ${treatment}
+
+👨‍⚕️ Doctor: ${doctor}
+
+📅 Appointment Date: ${date}`;
+
+    let whatsappURL =
+    `https://wa.me/919063837117?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+});

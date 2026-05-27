@@ -580,6 +580,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 .about-section{
     background:white;
     padding:50px 0;
@@ -633,7 +643,7 @@
 }
 .breadcrumb{
     position:absolute;
-    right:-450px;
+    right:-950px;
     bottom:20px;
 
     display:flex;
@@ -816,757 +826,404 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ====================================
-   FOUNDERS SECTION
-==================================== */
-
-.founders-section{
-    padding:20px 150px 50px 50px;
-    overflow-x: hidden;
-    background:#f4f7fa;
-}
-
-.founders-heading{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.founders-heading h2{
-    color:#efc24e;
-    font-size:52px;
-    font-weight:700;
-    margin-bottom:8px;
-}
-
-.founders-heading h3{
-    color:#29498f;
-    font-size:34px;
-    font-weight:600;
-}
-
-.founders-wrapper{
-    max-width:1400px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:50% 50%;
-    gap:40px;
-    align-items:center;
-}
-
-/* IMAGE */
-
-.founders-image{
+.doctors-section{
+    padding:100px 20px;
+    background:#fff;
     overflow:hidden;
-   
-      margin-top: -50px;
 }
 
-.founders-image img{
-    width:100%;
+.doctor-heading{
+    max-width:900px;
+    margin:0 auto 80px;
+    text-align:center;
+    position:relative;
+}
+
+.top-icon{
+    width:42px;
+    margin-bottom:15px;
+}
+
+.sub-title{
     display:block;
-   
-    
-    transition:.5s;
-}
-
-.founders-image:hover img{
-    transform:scale(1.03);
-}
-
-/* CONTENT */
-
-.founders-content{
-    padding-left:10px;
-}
-
-.founders-content p{
-
-    font-size:15px;
-    line-height:1.8;
-
-    color:black;
-
-    margin-bottom:15px;
-
-    text-align:justify;
-}
-
-.founders-quote{
-
-    font-size:22px;
-    font-weight:700;
-
-    color:#111;
-
-    line-height:1.7;
-
-    margin-top:20px;
-    margin-bottom:15px;
-
-    text-align:left;
-}
-
-.founders-name{
-
-    font-size:18px;
-    font-weight:700;
-
-    color:#111;
-
-    margin-bottom:35px;
-}
-
-/* BUTTON */
-
-.founders-btn{
-
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-
-    padding:18px 34px;
-
-    background:#29498f;
-    color:#fff;
-
-    border-radius:14px;
-
-    text-decoration:none;
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.founders-btn:hover{
-
-    background:#1e3872;
-    transform:translateY(-3px);
-}
-
-.founders-btn i{
-
-    transition:.3s;
-}
-
-.founders-btn:hover i{
-
-    transform:translateX(5px);
-}
-
-/* ====================================
-   TABLET
-==================================== */
-
-@media(max-width:991px){
-
-    .founders-wrapper{
-
-        grid-template-columns:1fr;
-        gap:35px;
-    }
-
-    .founders-content{
-
-        padding-left:0;
-    }
-
-    .founders-heading h2{
-
-        font-size:40px;
-    }
-
-    .founders-heading h3{
-
-        font-size:28px;
-    }
-}
-
-/* ====================================
-   MOBILE
-==================================== */
-
-@media(max-width:768px){
-
-    .founders-section{
-
-        padding:70px 15px;
-    }
-
-    .founders-heading{
-
-        margin-bottom:35px;
-    }
-
-    .founders-heading h2{
-
-        font-size:32px;
-    }
-
-    .founders-heading h3{
-
-        font-size:20px;
-        line-height:1.5;
-    }
-
-    .founders-image,
-    .founders-image img{
-
-        border-radius:20px;
-    }
-
-    .founders-content p{
-
-        font-size:15px;
-        line-height:1.9;
-
-        text-align:justify;
-    }
-
-    .founders-quote{
-
-        font-size:18px;
-        line-height:1.6;
-    }
-
-    .founders-name{
-
-        font-size:16px;
-    }
-
-    .founders-btn{
-
-        width:100%;
-
-        justify-content:center;
-
-        padding:16px 20px;
-
-        font-size:14px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-.who-we-are-section{
-    padding:40px 40px;
-}
-
-.who-we-are-wrapper{
-
-    width:98%;
-    max-width:1860px;
-    margin:auto;
-
-    background:linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f0f7fa 50%,
-    #f0f7fa 50%,
-    #f0f7fa 100%);
-
-    border-radius:30px;
-
-    padding:80px 60px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:120px;
-}
-
-
-.who-card h2{
-    font-size:44px;
-    line-height:1.1;
-    font-weight:700;
-    color:#031f3b;
-    margin-bottom:25px;
-}
-
-.who-card p{
-    font-size:16px;
-    line-height:1.6;
-    text-align: justify;
-    color:#5b6770;
+    font-size:14px;
+    color:#6f7c8a;
     margin-bottom:12px;
 }
 
-.who-card strong{
-    color:#5b6770;
+.doctor-heading h2{
+    font-size:52px;
+    color:#032447;
     font-weight:700;
+    margin-bottom:20px;
+    line-height:1.2;
 }
 
-.who-card ul{
-    margin:10px 0 15px 35px;
+.doctor-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
+    line-height:1.9;
+    font-size:15px;
 }
 
-.who-card ul li{
-    font-size:16px;
-    line-height:1.6;
-    color:#5b6770;
+.dot{
+    width:8px;
+    height:8px;
+    background:#e1b347;
+    border-radius:50%;
+    position:absolute;
 }
 
-.who-card ul li strong{
-    color:#5b6770;
+.left-dot{
+    left:-80px;
+    top:40px;
 }
 
-@media(max-width:991px){
-
-    .who-we-are-wrapper{
-        grid-template-columns:1fr;
-        gap:50px;
-        padding:50px 30px;
-    }
-
-    .who-card h2{
-        font-size:42px;
-    }
-
-    .who-card p,
-    .who-card ul li{
-        font-size:17px;
-        text-align: justify;
-        line-height:1.8;
-    }
-
+.right-dot{
+    right:-80px;
+    bottom:20px;
 }
 
-@media(max-width:576px){
-
-    .who-we-are-section{
-        padding:50px 0;
-    }
-
-    .who-we-are-wrapper{
-        width:94%;
-        padding:35px 20px;
-        border-radius:20px;
-    }
-
-    .who-card h2{
-        font-size:34px;
-        margin-bottom:20px;
-    }
-
-    .who-card p,
-    .who-card ul li{
-        font-size:16px;
-        text-align: justify;
-    }
-
-    .who-card ul{
-        margin-left:22px;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================
-   VISION & MISSION SECTION
-========================= */
-
-.vision-mission-section{
-    padding:80px 20px;
-}
-
-.vision-grid{
-    max-width:1900px;
+.doctors-grid{
+    max-width:1050px;
     margin:auto;
 
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:30px;
+    grid-template-columns:repeat(2,1fr);
+    gap:90px;
 }
 
-/* IMAGE CARD */
+.doctor-box{
+    position:relative;
+}
 
-.vision-image{
+.doctor-image{
+    width:100%;
     height:500px;
-    border-radius:30px;
     overflow:hidden;
 }
 
-.vision-image img{
+.doctor-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
 }
 
-/* VISION & MISSION CARDS */
+.doctor-card{
+    position:absolute;
 
-.vision-card{
-    min-height:300px;
+    left:-60px;
+    bottom:-25px;
 
-    background:#284682;
-    border-radius:30px;
+    width:240px;
 
-    padding:20px 25px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-/* HEADING */
-
-.vision-card h3{
-    text-align:center;
-    font-size:28px;
-    font-weight:700;
-    color:#ffcc54;
-    margin-bottom:30px;
-}
-
-/* VISION TEXT */
-
-.vision-card p{
-    color:#fff;
-    font-size:19px;
-    line-height:1.9;
-    text-align:center;
-}
-
-/* MISSION LIST */
-
-.vision-card ul{
-    padding-left:25px;
-}
-
-.vision-card ul li{
-    color:#fff;
-    font-size:16px;
-    line-height:1.6;
-    margin-bottom:10px;
-}
-
-/* DOT */
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:1199px){
-
-    .vision-grid{
-        gap:20px;
-    }
-
-    .vision-image{
-        height:420px;
-    }
-
-    .vision-card{
-        min-height:420px;
-        padding:35px 25px;
-    }
-
-    .vision-card h3{
-        font-size:24px;
-        margin-bottom:20px;
-    }
-
-    .vision-card p,
-    .vision-card ul li{
-        font-size:16px;
-        line-height:1.7;
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:991px){
-
-    .vision-mission-section{
-        padding:60px 15px;
-    }
-
-    .vision-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .vision-image{
-        height:300px;
-        border-radius:20px;
-    }
-
-    .vision-card{
-        min-height:auto;
-        border-radius:20px;
-        padding:35px 25px;
-    }
-
-    .vision-card h3{
-        font-size:24px;
-        margin-bottom:20px;
-    }
-
-    .vision-card p{
-        font-size:16px;
-        line-height:1.8;
-    }
-
-    .vision-card ul{
-        padding-left:20px;
-    }
-
-    .vision-card ul li{
-        font-size:16px;
-        line-height:1.8;
-        margin-bottom:8px;
-    }
-
-    .dot{
-        margin-top:15px;
-    }
-
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:576px){
-
-    .vision-mission-section{
-        padding:50px 12px;
-    }
-
-    .vision-image{
-        height:250px;
-    }
-
-    .vision-card{
-        padding:30px 20px;
-    }
-
-    .vision-card h3{
-        font-size:22px;
-    }
-
-    .vision-card p,
-    .vision-card ul li{
-        font-size:15px;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-.why-choose-section{
-    padding:40px 80px;
     background:#fff;
+
+    padding:28px;
+
+    border-radius:14px;
+
+    border:1px solid #dbe4f0;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
 }
 
-.container{
-    max-width:1400px;
-    margin:auto;
+.doctor-box:hover .doctor-card{
+    transform:translateY(-10px);
 }
 
-/* TOP */
-
-.top-content{
-    display:grid;
-    grid-template-columns:480px 1fr;
-    gap:60px;
-    align-items:center;
-    margin-bottom:70px;
+.card-logo{
+    width:48px;
+    margin-bottom:18px;
 }
 
-.left-image img{
-    width:100%;
-    height:540px;
-    object-fit:cover;
-    border-radius:20px;
-    display:block;
-}
-
-/* RIGHT */
-
-.right-content h2{
-    font-size:46px;
-    line-height:1.2;
-    color:#051b2e;
-    font-weight:700;
-    margin-bottom:30px;
-}
-
-.feature-text h5{
+.doctor-card h4{
+    color:#032447;
     font-size:18px;
-    color:#051b2e;
     margin-bottom:8px;
-    font-weight:700;
 }
 
-.feature-text p{
-    font-size:15px;
-    color:#555;
-    text-align: justify;
-    line-height:1.8;
+.doctor-card p{
+    color:#666;
+    font-size:14px;
+    line-height:1.7;
     margin-bottom:20px;
 }
 
-/* FEATURES GRID */
-
-.feature-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px 50px;
+.doctor-card a{
+    color:#444;
+    font-size:11px;
+    font-weight:700;
+    text-decoration:underline;
+    letter-spacing:.5px;
 }
 
-.feature-box{
-    display:flex;
-    gap:18px;
+.doctor-card a:hover{
+    color:#032447;
 }
-.icon{
-    width:52px;
-    height:52px;
-    min-width:52px;
-
-    border:1px solid #d7d7d7;
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:#051b2e;
-    font-size:18px;
-
-    transition:all .4s ease;
-}
-
-/* Hover */
-
-.feature-box:hover .icon{
-    background:#051b2e;
-    border-color:#051b2e;
-    color:#fff;
-}
-
-.feature-box h4{
-    font-size:22px;
-    color:#051b2e;
-    margin-bottom:10px;
-}
-
-.feature-box p{
-    font-size:14px;
-    text-align: justify;
-    line-height:1.8;
-    color:#666;
-}
-
-/* TABLET */
 
 @media(max-width:991px){
 
-    .top-content{
+    .doctors-grid{
         grid-template-columns:1fr;
-        gap:35px;
+        gap:100px;
     }
 
-    .left-image img{
-        height:350px;
+    .doctor-card{
+        left:20px;
     }
 
-    .right-content h2{
-        font-size:34px;
+    .doctor-heading h2{
+        font-size:38px;
     }
 
-    .feature-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:30px;
+    .left-dot,
+    .right-dot{
+        display:none;
     }
-
 }
 
-/* MOBILE */
+@media(max-width:576px){
 
-@media(max-width:767px){
-
-    .why-choose-section{
+    .doctors-section{
         padding:60px 15px;
     }
 
-    .left-image img{
-        height:250px;
+    .doctor-heading{
+        margin-bottom:50px;
     }
 
-    .right-content h2{
-        font-size:28px;
+    .doctor-heading h2{
+        font-size:30px;
     }
 
-    .feature-grid{
-        grid-template-columns:1fr;
-    }
-
-    .feature-box h4{
-        font-size:18px;
-    }
-
-    .feature-box p{
+    .doctor-heading p{
         font-size:14px;
-        text-align: justify;
     }
 
-    .feature-text h5{
+    .doctor-image{
+        height:380px;
+    }
+
+    .doctor-card{
+        width:210px;
+        padding:20px;
+        left:15px;
+        bottom:-20px;
+    }
+
+    .card-logo{
+        width:40px;
+    }
+
+    .doctor-card h4{
         font-size:16px;
     }
 
-    .feature-text p{
-        font-size:14px;
-        text-align: justify;
+    .doctor-card p{
+        font-size:13px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.philosophy-section{
+    padding:100px 20px;
+    background:#fff;
+    overflow:hidden;
+}
+
+.philosophy-content{
+    max-width:900px;
+    margin:0 auto 70px;
+    text-align:center;
+    position:relative;
+}
+
+.top-icons{
+    display:flex;
+    justify-content:center;
+    gap:2px;
+    margin-bottom:15px;
+}
+
+.top-icons img{
+    width:22px;
+}
+
+.icon-up{
+    transform:translateY(-4px);
+}
+
+.icon-down{
+    transform:translateY(4px);
+}
+
+.sub-title{
+    display:block;
+    color:#7a7a7a;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.philosophy-content h2{
+    font-size:58px;
+    color:#032447;
+    margin-bottom:30px;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.philosophy-content p{
+    max-width:760px;
+    margin:0 auto 28px;
+    color:#707070;
+    line-height:2;
+    font-size:16px;
+}
+
+.gold-dot{
+    width:7px;
+    height:7px;
+    background:#dcb04b;
+    border-radius:50%;
+    position:absolute;
+}
+
+.left-dot{
+    left:-120px;
+    top:80px;
+}
+
+.right-dot{
+    right:-120px;
+    bottom:50px;
+}
+
+.philosophy-image{
+    max-width:1300px;
+    margin:auto;
+}
+
+.philosophy-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+
+    border-radius:60px;
+
+    display:block;
+}
+@media(max-width:991px){
+
+    .philosophy-content h2{
+        font-size:42px;
     }
 
+    .philosophy-image img{
+        height:500px;
+        border-radius:40px;
+    }
+
+    .left-dot,
+    .right-dot{
+        display:none;
+    }
 }
+
+@media(max-width:576px){
+
+    .philosophy-section{
+        padding:70px 15px;
+    }
+
+    .philosophy-content{
+        margin-bottom:40px;
+    }
+
+    .philosophy-content h2{
+        font-size:30px;
+    }
+
+    .philosophy-content p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .philosophy-image img{
+        height:280px;
+        border-radius:25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1997,364 +1654,372 @@
 
 
 
-/* =========================
-   APPOINTMENT SECTION
-========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+
+
+
+
+.hospital-section{
+    padding:40px 40px;
+    overflow: hidden;
 }
 
-.appointment-section{
-    padding:40px 60px;
-    background:#f5f5f5;
-    overflow-x: hidden;
-}
-
-.appointment-container{
-    max-width:1400px;
-    margin:auto;
-}
-
-/* =========================
-   BANNER
-========================= */
-
-.appointment-banner{
+.hospital-wrapper{
+    display:flex;
+    gap:40px;
+    background:#06284a;
+    border-radius:30px;
+    padding:18px;
+    overflow:hidden;
     position:relative;
-    height:300px;
-
-    background:
-    linear-gradient(rgba(0,0,0,.15),
-    rgba(0,0,0,.15)),
-    url("../images/about4.png");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    border-radius:20px 20px 0 0;
 }
 
-/* =========================
-   HEADING
-========================= */
 
-.appointment-content{
-    position:absolute;
-    left:40px;
-    top:270px;
-    max-width:500px;
+
+.hospital-image{
+    flex:0 0 30%;
 }
 
-.appointment-content h2{
-    color:#fff;
-    font-size:16px;
-    font-weight:700;
-    line-height:1.5;
-}
-
-/* =========================
-   FLOATING FORM
-========================= */
-
-.appointment-form-box{
-    position:absolute;
-
-    right:40px;
-    bottom:-70px;
-
-    width:760px;
-
-    background:#f3f3f3;
-
-    border-radius:22px;
-
-    padding:25px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-
-    z-index:10;
-}
-
-#appointmentForm{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.form-grid{
-    flex:1;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.form-grid input,
-.form-grid select{
+.hospital-image img{
     width:100%;
-    height:58px;
-
-    border:1px solid #ddd;
-    border-radius:14px;
-
-    padding:0 18px;
-
-    background:#fff;
-
-    font-size:15px;
+    height:100%;
+    object-fit:cover;
+    border-radius:25px;
 }
 
-.form-grid input:focus,
-.form-grid select:focus{
-    outline:none;
-    border-color:#3155a6;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.appointment-btn{
-    width:170px;
-    height:170px;
-
-    min-width:170px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#3155a6;
+.hospital-content{
+    flex:1;
     color:#fff;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:10px;
-
-    cursor:pointer;
+    padding:40px 20px;
 }
 
-.appointment-btn i{
-    font-size:32px;
-    color:#00ff99;
-}
-
-.appointment-btn span{
-    font-size:17px;
+.hospital-content h2{
+    font-size:46px;
+    line-height:1.2;
     font-weight:700;
-    text-align:center;
-    line-height:1.4;
-}
-
-/* =========================
-   BLUE AREA
-========================= */
-
-.appointment-bottom{
-    background:#2d4f97;
-
-    padding:130px 60px 60px;
-
-    color:#fff;
-
-    border-radius:0 0 20px 20px;
-}
-.contact-grid{
-    display:flex;
-    justify-content:flex-start;
-    gap:50px; /* 0, 10, 20 meeku nachinattu */
-
-    flex-wrap:wrap;
-}
-
-.icon-circle{
-    width:55px;
-    height:55px;
-
-    border:1px solid rgba(255,255,255,.4);
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-bottom:15px;
-}
-
-.icon-circle i{
-    color:#fff;
-    font-size:18px;
-}
-
-.contact-box h4{
-    color:#fff;
-    font-size:20px;
-    margin-bottom:12px;
-}
-
-.contact-box p{
-    color:#fff;
-    font-size:15px;
-    line-height:1.8;
-}
-
-.divider{
-    height:1px;
-    background:rgba(255,255,255,.25);
-    margin:40px 0;
-}
-
-.appointment-bottom h3{
-    color:#fff;
-    font-size:28px;
     margin-bottom:25px;
 }
 
-/* =========================
-   BENEFITS
-========================= */
-.benefits-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-
-    gap:25px 60px;   /* middle gap taggindi */
-
-    max-width:650px; /* width taggindi */
-
-    margin:0;        /* center kakunda left side */
+.description{
+    color:#d7dbe2;
+    font-size:18px;
+    line-height:1.8;
+    max-width:850px;
 }
 
-.benefit-item{
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin:35px 0;
+}
+
+.features div{
+    color:#fff;
+    font-size:17px;
+}
+
+.features i{
+    color:#19d88c;
+    margin-right:10px;
+}
+
+hr{
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.15);
+    margin:30px 0;
+}
+
+.info-box{
+    display:flex;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.info-item{
     display:flex;
     align-items:flex-start;
-    gap:12px;
+    gap:15px;
 }
 
-.benefit-item i{
-    color:#00ff99;
-    font-size:18px;
-    margin-top:4px;
+.icon{
+    width:52px;
+    height:52px;
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.benefit-item span{
+.icon i{
     color:#fff;
-    font-size:16px;
-    line-height:1.6;
+    font-size:20px;
 }
 
-/* =========================
-   TABLET
-========================= */
+.info-item h4{
+    margin-bottom:8px;
+}
+
+.info-item p{
+    color:#d6dce6;
+    line-height:1.7;
+}
+
+.appointment-btn{
+    margin-top:40px;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:#f5c84b;
+    color:#111;
+    text-decoration:none;
+    padding:18px 32px;
+    border-radius:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.appointment-btn:hover{
+    transform:translateY(-4px);
+}
 
 @media(max-width:991px){
 
-    .appointment-banner{
-        height:auto;
-        padding:50px 20px;
-    }
-
-    .appointment-content{
-        position:static;
-        max-width:100%;
-        margin-bottom:25px;
-    }
-
-    .appointment-content h2{
-        font-size:22px;
-    }
-
-    .appointment-form-box{
-        position:static;
-        width:100%;
-        margin-top:25px;
-    }
-
-    #appointmentForm{
+    .hospital-wrapper{
         flex-direction:column;
     }
 
-    .appointment-btn{
-        width:100%;
-        height:65px;
-
-        border-radius:12px;
-
-        flex-direction:row;
+    .hospital-content h2{
+        font-size:38px;
     }
 
-    .appointment-bottom{
-        padding:60px 30px;
-    }
-
-    .contact-grid,
-    .benefits-grid{
+    .features{
         grid-template-columns:1fr;
     }
-}
 
-/* =========================
-   MOBILE
-========================= */
+    .info-box{
+        gap:30px;
+        flex-direction:column;
+    }
+}
 
 @media(max-width:576px){
 
-    .appointment-section{
+    .hospital-section{
+        padding:15px;
+    }
+
+    .hospital-content{
         padding:20px 10px;
     }
 
-    .appointment-content h2{
-        font-size:20px;
+    .hospital-content h2{
+        font-size:30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.blogs-section{
+    padding:50px 50px;
+    overflow-x: hidden;
+    background:#f8f8f8;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.blog-header{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.sub-title{
+    font-size:14px;
+    color:#666;
+}
+
+.blog-header h2{
+    font-size:42px;
+    color:#0f233b;
+    margin-top:10px;
+}
+
+.header-right{
+    max-width:450px;
+}
+
+.header-right p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.all-btn{
+    display:inline-block;
+    background:#264796;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.blog-card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.blog-image{
+    position:relative;
+    padding:14px;
+}
+
+.blog-image img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.date-box{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#ffc83d;
+    width:50px;
+    height:60px;
+    border-radius:4px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.date-box span{
+    font-size:22px;
+    font-weight:700;
+}
+
+.date-box small{
+    font-size:12px;
+}
+
+.blog-content{
+    padding:0 16px 20px;
+}
+
+.blog-content h3{
+    font-size:20px;
+    line-height:1.6;
+    color:#1d2b42;
+    margin-bottom:25px;
+    min-height:100px;
+}
+
+.blog-content a{
+    color:#1d2b42;
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:991px){
+
+    .blog-header{
+        flex-direction:column;
     }
 
-    .form-grid{
+    .blog-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .blog-grid{
         grid-template-columns:1fr;
     }
 
-    .form-grid input,
-    .form-grid select{
-        height:55px;
-        font-size:14px;
-    }
-
-    .appointment-btn{
-        width:100%;
-        height:58px;
-
-        border-radius:10px;
-    }
-
-    .appointment-btn i{
-        font-size:20px;
-    }
-
-    .appointment-btn span{
-        font-size:14px;
-    }
-
-    .appointment-bottom{
-        padding:50px 20px 30px;
-    }
-
-    .contact-box h4{
-        font-size:18px;
-    }
-
-    .contact-box p{
-        font-size:14px;
-    }
-
-    .appointment-bottom h3{
-        font-size:22px;
-    }
-
-    .benefit-item span{
-        font-size:14px;
+    .blog-header h2{
+        font-size:32px;
     }
 }
+.blog-image{
+    position:relative;
+    padding:14px;
+}
+
+.blog-image img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.image-overlay{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    color:#fff;
+    font-size:12px;
+    font-weight:500;
+    z-index:2;
+}
+
+.blog-image::after{
+    content:"";
+    position:absolute;
+    left:14px;
+    right:14px;
+    bottom:14px;
+    height:120px;
+    border-radius:0 0 14px 14px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0)
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

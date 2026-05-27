@@ -159,114 +159,409 @@
 
 
 
-/* Navbar - ఎత్తు తగ్గించబడింది */
-.navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px 40px;
-    background: #fff;
-    border-bottom: 2px solid #f0f0f0;
-    gap: 80px; /* మీ ఇష్టానుసారం అడ్జస్ట్ చేసుకోండి */
+
+/* ==========================
+   STICKY NAVBAR`
+========================== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    background:#fff;
+    border-bottom:1px solid #eee;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
 }
 
-/* లోగోల సైజు */
-.logos { display: flex; gap: 15px; align-items: center; }
-.logos img { height: 50px; width: auto; }
+.navbar-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-.logo-container { display: flex; flex-direction: column; }
-.tagline { 
-    color: #284682; 
-    font-weight: 600; 
-    margin-top: 5px; 
-    margin-left: 60px;
-    font-size: 16px; 
+    max-width:1400px;
+    margin:auto;
+
+    padding:12px 25px;
 }
 
-/* Nav Links */
-.nav-links { display: flex; list-style: none; gap: 25px; }
-.nav-links > li > a { 
-    text-decoration: none; 
-    color: #333; 
-    font-weight: 600; 
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Text మరియు Icon మధ్య గ్యాప్ */
+/* ==========================
+   LOGO
+========================== */
+
+.logo-container{
+    display:flex;
+    flex-direction:column;
 }
 
-/* Chevron Icon Styling */
-.nav-links li a i { font-size: 8px; transition: 0.3s; }
-
-/* Dropdown styling */
-/* డ్రాప్‌డౌన్ మెనూ సరిగ్గా రావడానికి */
-.dropdown { 
-    position: relative; /* ఇది తప్పనిసరి */
+.logos{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%; /* ఇది నేవిగేషన్ బార్‌కి సరిగ్గా కింద మొదలవుతుంది */
-    left: 0;
-    background: #284682;
-    display: none;
-    width: 300px;
-    list-style: none;
-    border-radius: 0 0 8px 8px;
-    padding: 8px 0;
-    z-index: 1000;
-    margin-top: 15px; /* కొంచెం గ్యాప్ కోసం (మీ అవసరాన్ని బట్టి మార్చుకోండి) */
+.logos img{
+    height:60px;
+    width:auto;
+    display:block;
 }
 
-/* హోవర్ చేసినప్పుడు డ్రాప్‌డౌన్ చూపించడానికి */
-.dropdown:hover .dropdown-menu { 
-    display: block; 
-}
-.dropdown:hover > a i { transform: rotate(180deg); } /* హోవర్ చేసినప్పుడు యారో తిరుగుతుంది */
-
-.dropdown-menu li a { 
-    color: white; 
-    padding: 10px 20px; 
-    display: block; 
-    text-decoration: none; 
-    transition: 0.3s; 
+.tagline{
+    color:#284682;
+    font-size:14px;
+    font-weight:600;
+    margin-top:4px;
+    margin-left:55px;
 }
 
-/* Yellow Text Hover Effect (బార్ కాకుండా కేవలం టెక్స్ట్ మారుతుంది) */
-.dropdown-menu li a:hover { 
-    color: #f1c40f; /* కేవలం టెక్స్ట్ రంగు మారుతుంది */
-    background: transparent; /* బ్యాక్గ్రౌండ్ మారదు */
+/* ==========================
+   DESKTOP MENU
+========================== */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    
+    list-style:none;
+
+    transform:translateX(-200px);
+}
+.nav-links li{
+    position:relative;
 }
 
-/* Mobile Responsive */
-@media (max-width: 992px) {
-    .navbar { flex-direction: column; padding: 15px; gap: 15px; }
-    .nav-links { flex-direction: column; gap: 10px; text-align: center; }
-    .tagline { margin-left: 0; }
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-size:16px;
+   
+    font-weight:600;
+    transition:.3s;
 }
+
+.nav-links a:hover{
+    color:#284682;
+}
+
+/* Dropdown Icon */
+
+.nav-links li a i{
+    font-size:11px;
+    color:#284682;
+    margin-left:6px;
+    transition:.3s;
+}
+
+.dropdown:hover > a i{
+    transform:rotate(180deg);
+}
+
+.dropdown.active > a i{
+    transform:rotate(180deg);
+}
+
+/* ==========================
+   DROPDOWN
+========================== */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+
+    width:320px;
+
+    background:#284682;
+
+    list-style:none;
+
+    display:none;
+
+    border-radius:0 0 12px 12px;
+
+    max-height:70vh;
+    overflow-y:auto;
+
+    z-index:9999;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+.dropdown-menu li{
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.dropdown-menu li:last-child{
+    border-bottom:none;
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:12px 18px;
+    color:#fff;
+    font-size:14px;
+}
+
+.dropdown-menu li a:hover{
+    background:rgba(255,255,255,.08);
+    color:#ffc83d;
+}
+
+/* ==========================
+   HAMBURGER
+========================== */
 
 .menu-toggle{
     display:none;
-    font-size:28px;
-    color:#284682;
+
+    width:40px;
+    height:40px;
+
+    align-items:center;
+    justify-content:center;
+
     cursor:pointer;
 }
 
+.menu-toggle i{
+    font-size:26px;
+    color:#284682;
+}
+
+/* ==========================
+   TABLET + MOBILE
+========================== */
+
 @media(max-width:992px){
 
-    .menu-toggle{
-        display:block;
+    html,
+    body{
+        overflow-x:hidden;
+    }
+.navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+
+        z-index:99999;
+
+        background:#fff;
+
+        padding:0;
+    }
+
+    .navbar-inner{
+        padding:12px 15px;
+    }
+
+    body{
+        padding-top:85px;
     }
 
     .nav-links{
+        top:85px;
+    }
+
+
+
+    .logo-container{
+        max-width:80%;
+    }
+
+    .logos img{
+        height:38px;
+    }
+
+    .tagline{
+        margin-left:0;
+        font-size:12px;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:75px;
+        left:50%;
+
+        transform:translateX(-50%);
+
+        width:95%;
+        max-width:500px;
+
+        background:#fff;
+
+        border-radius:15px;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.15);
+
         display:none;
+
+        flex-direction:column;
+
+        gap:0;
+
+        overflow:hidden;
+
+        z-index:9998;
     }
 
     .nav-links.active{
         display:flex;
     }
+
+    .nav-links li{
+        width:100%;
+        border-bottom:1px solid #eee;
+    }
+
+    .nav-links li:last-child{
+        border-bottom:none;
+    }
+
+    .nav-links li a{
+
+        width:100%;
+
+        padding:15px 20px;
+
+        display:flex;
+
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    /* MOBILE DROPDOWN */
+.dropdown-menu{
+
+    position:static;
+
+    width:100%;
+
+    display:none;
+
+    background:#284682;
+
+    border-radius:0;
+
+    max-height:250px;   /* add */
+
+    overflow-y:auto;    /* add */
+
+    overflow-x:hidden;  /* add */
+}
+.dropdown-menu::-webkit-scrollbar{
+    width:5px;
 }
 
+.dropdown-menu::-webkit-scrollbar-track{
+    background:#1f376b;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.5);
+    border-radius:10px;
+}
+    .dropdown.active .dropdown-menu{
+       display:block !important;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display:none;
+    }
+
+    .dropdown-menu li a{
+        padding:14px 25px;
+        font-size:14px;
+    }
+       
+   
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:576px){
+
+    .navbar{
+        padding:10px 12px;
+    }
+
+    .logos{
+        gap:8px;
+    }
+
+    .logos img{
+        height:32px;
+    }
+
+    .tagline{
+        font-size:11px;
+    }
+
+    .menu-toggle i{
+        font-size:24px;
+    }
+
+    .nav-links{
+        width:96%;
+        top:70px;
+    }
+
+    .nav-links li a{
+        font-size:14px;
+        padding:14px 16px;
+    }
+
+    .dropdown-menu li a{
+        font-size:13px;
+        padding:12px 20px;
+    }
+}
+
+/* ==========================
+   EXTRA SMALL DEVICES
+========================== */
+
+@media(max-width:380px){
+
+    .logos img{
+        height:28px;
+    }
+
+    .tagline{
+        font-size:10px;
+    }
+
+    .menu-toggle i{
+        font-size:22px;
+    }
+}
+.dropdown.active .dropdown-menu{
+    display:block;
+}
+
+@media(max-width:992px){
+
+    .dropdown:hover .dropdown-menu{
+        display:none;
+    }
+
+}
 
 
 
@@ -1761,38 +2056,45 @@
 
 
 
-
-
-
 /* =========================
    TESTIMONIAL SECTION
 ========================= */
 
 .reviews-section{
     background:linear-gradient(180deg,#004d7a,#00365d);
-    padding:70px 0;
-    border-radius:30px;
-    margin:60px 0;
+    max-width:1200px;
+    margin:50px auto;
+    padding:40px 0;
+    border-radius:25px;
+    position: relative;
     overflow:hidden;
 }
 
 .reviews-section .container{
-    max-width:1400px;
+    max-width:1100px;
     margin:auto;
-    padding:0 25px;
+    padding:0 20px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.review-heading{
+    margin-bottom:25px;
 }
 
 .review-heading span{
     color:#ffc83d;
-    font-size:15px;
+    font-size:14px;
     font-weight:600;
 }
 
 .review-heading h2{
     color:#fff;
-    font-size:60px;
+    font-size:42px;
     font-weight:700;
-    margin:10px 0 30px;
+    margin-top:8px;
 }
 
 /* =========================
@@ -1801,11 +2103,11 @@
 
 .review-wrapper{
     background:#fff;
-    border-radius:35px;
-    padding:35px;
+    border-radius:25px;
+    padding:25px;
     display:flex;
-    gap:30px;
     align-items:center;
+    gap:20px;
 }
 
 /* =========================
@@ -1813,52 +2115,48 @@
 ========================= */
 
 .google-box{
-    width:310px;
-    min-width:310px;
+    width:250px;
+    min-width:250px;
 }
-
-/* LOGO + NAME SIDE BY SIDE */
 
 .google-header{
     display:flex;
     align-items:center;
-    gap:18px;
-    margin-bottom:25px;
+    gap:15px;
+    margin-bottom:20px;
 }
 
 .google-header img{
-    width:95px;
+    width:70px;
     height:auto;
-    flex-shrink:0;
 }
 
 .hospital-info h3{
-    font-size:20px;
-    line-height:1.3;
-    margin:0 0 10px;
+    font-size:18px;
+    line-height:1.4;
     color:#111;
-    font-weight:700;
+    margin-bottom:8px;
 }
 
 .stars{
     color:#fbbc04;
-    font-size:28px;
-    line-height:1;
+    font-size:22px;
 }
 
 .hospital-info p{
-    margin-top:10px;
-    color:#444;
-    font-size:17px;
+    font-size:15px;
+    color:#666;
+    margin-top:8px;
 }
 
 .review-btn{
     display:inline-block;
-    padding:12px 30px;
-    border:1px solid #d5d5d5;
-    border-radius:10px;
+    padding:10px 22px;
+    border:1px solid #ddd;
+    border-radius:8px;
     text-decoration:none;
     color:#111;
+    font-size:14px;
     font-weight:600;
     transition:.3s;
 }
@@ -1878,44 +2176,44 @@
 }
 
 .reviewSwiper{
-    padding:10px;
+    padding:5px;
 }
+
+/* =========================
+   CARD
+========================= */
 
 .review-card{
     background:#fff;
     border:1px solid #ececec;
-    border-radius:18px;
-    padding:22px;
-    min-height:280px;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    border-radius:15px;
+    padding:18px;
+    min-height:230px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
     position:relative;
 }
 
-/* GOOGLE ICON */
-
 .google-icon{
     position:absolute;
-    top:22px;
-    right:20px;
+    top:18px;
+    right:18px;
 }
 
 .google-icon img{
-    width:24px;
+    width:22px;
 }
-
-/* USER */
 
 .user{
     display:flex;
     align-items:center;
-    gap:12px;
-    margin-bottom:18px;
+    gap:10px;
+    margin-bottom:15px;
 }
 
 .avatar,
 .user-photo{
-    width:48px;
-    height:48px;
+    width:45px;
+    height:45px;
     border-radius:50%;
     flex-shrink:0;
 }
@@ -1925,8 +2223,8 @@
     align-items:center;
     justify-content:center;
     color:#fff;
+    font-size:18px;
     font-weight:700;
-    font-size:20px;
 }
 
 .green{
@@ -1938,7 +2236,7 @@
 }
 
 .blue{
-    background:#2196f3;
+    background:#1976d2;
 }
 
 .user-photo{
@@ -1946,120 +2244,31 @@
 }
 
 .user-details h4{
-    margin:0;
     font-size:15px;
     color:#111;
+    margin:0;
 }
 
 .user-details span{
+    font-size:12px;
     color:#888;
-    font-size:14px;
 }
-
-/* RATING */
 
 .rating{
     color:#fbbc04;
-    font-size:20px;
-    margin-bottom:15px;
+    font-size:16px;
+    margin-bottom:12px;
 }
 
 .verify{
     color:#4285f4;
-    margin-left:5px;
+    margin-left:4px;
 }
-
-/* REVIEW */
 
 .review-text{
-    color:#444;
-    line-height:1.8;
-    font-size:15px;
-
-    display:-webkit-box;
-    -webkit-line-clamp:4;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-}
-
-.review-card.active .review-text{
-    display:block;
-}
-
-.read-more-btn{
-    margin-top:10px;
-    border:none;
-    background:none;
-    color:#888;
-    cursor:pointer;
-    padding:0;
-    font-size:15px;
-}
-
-/* =========================
-   ARROWS
-========================= */
-
-.swiper-button-next,
-.swiper-button-prev{
-    width:42px !important;
-    height:42px !important;
-    background:#fff;
-    border-radius:50%;
-    box-shadow:0 4px 15px rgba(0,0,0,.15);
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after{
-    font-size:14px !important;
-    color:#222;
-    font-weight:700;
-}
-
-.swiper-button-prev{
-    left:-5px !important;
-}
-
-.swiper-button-next{
-    right:-5px !important;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:1200px){
-
-    .review-wrapper{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .google-box{
-        width:100%;
-        min-width:100%;
-    }
-}
-
-@media(max-width:768px){
-
-    .review-heading h2{
-        font-size:38px;
-    }
-
-    .google-header{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .review-wrapper{
-        padding:25px;
-    }
-}
-.review-text{
-    color:#444;
-    line-height:1.8;
-    font-size:15px;
+    color:#555;
+    font-size:14px;
+    line-height:1.7;
 
     display:-webkit-box;
     -webkit-line-clamp:4;
@@ -2073,19 +2282,180 @@
 }
 
 .read-more-btn{
+    margin-top:10px;
     border:none;
     background:none;
     color:#888;
     cursor:pointer;
-    font-size:15px;
-    margin-top:12px;
-    padding:0;
+    font-size:14px;
     font-weight:600;
+    padding:0;
 }
 
+/* =========================
+   SWIPER ARROWS
+========================= */
 
+.swiper-button-next,
+.swiper-button-prev{
+    width:36px !important;
+    height:36px !important;
+    background:#fff;
+    border-radius:50%;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
 
+.swiper-button-next:after,
+.swiper-button-prev:after{
+    font-size:12px !important;
+    color:#222;
+    font-weight:700;
+}
 
+.swiper-button-prev{
+    left:-5px !important;
+}
+
+.swiper-button-next{
+    right:-5px !important;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:991px){
+
+    .review-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .google-box{
+        width:100%;
+        min-width:100%;
+    }
+
+    .review-heading h2{
+        font-size:34px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .reviews-section{
+        margin:30px 10px;
+        padding:25px 0;
+        border-radius:20px;
+    }
+
+    .reviews-section .container{
+        padding:0 15px;
+    }
+
+    .review-heading{
+        text-align:center;
+    }
+
+    .review-heading span{
+        font-size:12px;
+    }
+
+    .review-heading h2{
+        font-size:28px;
+        line-height:1.3;
+    }
+
+    .review-wrapper{
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .google-header{
+        gap:12px;
+    }
+
+    .google-header img{
+        width:55px;
+    }
+
+    .hospital-info h3{
+        font-size:16px;
+    }
+
+    .stars{
+        font-size:18px;
+    }
+
+    .hospital-info p{
+        font-size:13px;
+    }
+
+    .review-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .review-card{
+        min-height:auto;
+        padding:15px;
+    }
+
+    .avatar,
+    .user-photo{
+        width:40px;
+        height:40px;
+    }
+
+    .user-details h4{
+        font-size:14px;
+    }
+
+    .review-text{
+        font-size:13px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        display:none !important;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .review-heading h2{
+        font-size:24px;
+    }
+
+    .review-wrapper{
+        padding:15px;
+    }
+
+    .review-card{
+        padding:12px;
+    }
+
+    .hospital-info h3{
+        font-size:15px;
+    }
+}
+.quote-icon{
+    position:absolute;
+    top:40px;
+    right:60px;
+
+    color:#fff;
+    font-size:90px;
+    opacity:.9;
+}
 
 
 
