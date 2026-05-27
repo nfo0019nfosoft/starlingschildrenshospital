@@ -1060,6 +1060,122 @@ Call Us 24/7: +91 90638 37117 |<br>
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    // =========================
+    // REVIEW SWIPER
+    // =========================
+
+    const reviewSwiperEl = document.querySelector(".reviewSwiper");
+
+    if (reviewSwiperEl) {
+        new Swiper(".reviewSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1200: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
+
+    // =========================
+    // READ MORE BUTTON
+    // =========================
+
+    document.querySelectorAll(".read-more-btn").forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const card = this.closest(".review-card");
+
+            if (!card) return;
+
+            card.classList.toggle("active");
+
+            this.textContent = card.classList.contains("active")
+                ? "Read less"
+                : "Read more";
+        });
+
+    });
+
+    // =========================
+    // COUNTER SECTION (SAFE)
+    // =========================
+
+    const counterSection = document.querySelector(".counter-section");
+
+    if (counterSection) {
+
+        let started = false;
+
+        function runCounters() {
+
+            const rect = counterSection.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && !started) {
+
+                started = true;
+
+                const counters = document.querySelectorAll(".counter");
+
+                counters.forEach(counter => {
+
+                    const target = +counter.getAttribute("data-target");
+                    let count = 0;
+
+                    const updateCounter = () => {
+
+                        const increment = target / 100;
+
+                        if (count < target) {
+
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+
+                            requestAnimationFrame(updateCounter);
+
+                        } else {
+
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCounter();
+
+                });
+            }
+        }
+
+        window.addEventListener("scroll", runCounters);
+        runCounters();
+    }
+
+});
+</script>
+
 
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
