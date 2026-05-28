@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pediatric Intensive Care Unit in Hyderabad | Advanced PICU Care</title>
+
+<link rel="stylesheet" href="css/general-pediatrics.css">
+  <link rel="icon" type="image/png" href="images/pic.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="topbar-container">
+
+        <div class="topbar-left">
+
+            <div class="top-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sindhi Colony, Begumpet, Secunderabad</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:starlings.hyd@gmail.com">
+                    starlings.hyd@gmail.com
+                </a>
+            </div>
+
+            <div class="top-item">
+                <i class="far fa-clock"></i>
+                <span>24/7 Expert Care</span>
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+           <a href="contact.html" class="topbar-btn">
+    Book An Appointment  
+    <i class="fas fa-arrow-right"></i>
+</a>
+        </div>
+
+    </div>
+</div>
+
+
+<nav class="navbar">
+      <div class="navbar-inner">
+    <div class="logo-container">
+        <div class="logos">
+            <img src="images/logo1.png" alt="Starlings Logo">
+            <img src="images/logo2.png" alt="Birth Stories">
+        </div>
+        <p class="tagline">Patient First, Empathy Always</p>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="child-care.html">Child Care <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="general-pediatrics.html">General Pediatrics</a></li>
+                <li><a href="neonatal-intensive-care-unit.html">Neonatal Intensive Care Unit</a></li>
+                <li><a href="pediatric-intensive-care-unit.html">Pediatric Intensive Care Unit</a></li>
+                <li><a href="childrens-nutrition.html">Childrens Nutrition</a></li>
+                <li><a href="pediatric-allergy.html">Pediatric Allergy</a></li>
+                <li><a href="development-and-behavioural-pediatrics.html">Development and Behavioural Pediatrics</a></li>
+                <li><a href="pediatric-surgery-and-laparoscopy.html">Pediatric Surgery and Laparoscopy</a></li>
+                <li><a href="pediatric-orthopedics.html">Pediatric Orthopedics</a></li>
+                <li><a href="pediatric-urology.html">Pediatric Urology</a></li>
+                <li><a href="pediatric-neurology.html">Pediatric Neurology</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="women-care.html">Women Care <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="obstetrics-and-gynecology.html">Obstetrics & Gynecology</a></li>
+                <li><a href="pregnancy-and-delivery.html">Pregnancy & Delivery</a></li>
+                <li><a href="painless-delivery-and-labor.html">Painless Delivery & Labor</a></li>
+                <li><a href="vaginal-birth-after-caesarean.html">Vaginal Birth After Caesarean</a></li>
+                <li><a href="childbirth-preparation-classes.html">Childbirth Preparation Classes</a></li>
+                <li><a href="high-risk-pregnancy.html">High Risk Pregnancy</a></li>
+                <li><a href="lactation.html">Lactation</a></li>
+                <li><a href="breast-feeding-support.html">Breast Feeding Support</a></li>
+                <li><a href="breast-care-clinic.html">Breast Care Clinic</a></li>
+                <li><a href="preconception-counselling.html">Preconception Counselling</a></li>
+                <li><a href="pre-pregnancy-health-check-up.html">Pre-pregnancy Health Checkup</a></li>
+                <li><a href="gynecological-endoscopic-surgeries.html">Gynecological Endoscopic Surgeries</a></li>
+                <li><a href="laparoscopic-surgeries.html">Laparoscopic Surgeries</a></li>
+                <li><a href="well-woman-checkup.html">Well Woman Checkup</a></li>
+                <li><a href="menopause-and-perimenopause.html">Menopause & Perimenopause</a></li>
+                <li><a href="women-nutrition.html">Women’s Nutrition</a></li>
+                <li><a href="ovulation-induction.html">Ovulation Induction</a></li>
+            </ul>
+        </li>
+
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    </div>
+</nav>
+
+
+
+<script>
+    const menuBtn = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+
+/* Menu Toggle */
+
+menuBtn.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+    const icon = menuBtn.querySelector("i");
+
+    if(navMenu.classList.contains("active")){
+        icon.classList.replace("fa-bars","fa-times");
+    }else{
+        icon.classList.replace("fa-times","fa-bars");
+    }
+
+});
+
+/* Mobile Dropdown */
+
+document.querySelectorAll(".dropdown > a").forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        if(window.innerWidth <= 992){
+
+            e.preventDefault();
+
+            const currentDropdown = this.closest(".dropdown");
+
+            // Close all other dropdowns
+            document.querySelectorAll(".dropdown").forEach(dropdown => {
+
+                if(dropdown !== currentDropdown){
+                    dropdown.classList.remove("active");
+                }
+
+            });
+
+            // Toggle current dropdown
+            currentDropdown.classList.toggle("active");
+        }
+
+    });
+
+});
+</script>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    easing:"ease-in-out",
+    once:false,
+    mirror:true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="pediatric-section">
+
+    <div class="overlay"></div>
+
+    <div class="content">
+
+        <h2 data-aos="fade-up">
+            PEDIATRIC INTENSIVE CARE UNIT (PICU) 
+        </h2>
+<p class="nicu-subtitle">
+    Advanced ICU care to treat critically ill children with 24×7 monitoring.
+</p>
+        <div class="cards">
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+
+                <p>
+                    Advanced pediatric technology with child-friendly infrastructure
+                </p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon">
+                    <i class="far fa-clock"></i>
+                </div>
+
+                <p>
+                  24/7 pediatric emergency and critical care support
+                </p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+
+                <p>
+                 Complete care journey from diagnosis to recovery
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="general-pediatrics">
+    <div class="container">
+
+        <!-- Left Content -->
+        <div class="content-box" data-aos="fade-right">
+
+            <h2>
+             Expert critical care for children during medical emergencies
+            </h2>
+
+            <p>
+             The Pediatric Intensive Care Unit (PICU) at Starlings Children’s Hospital is built around one core principle — providing the right care at the right time for critically ill children. Every decision in our PICU is guided by clinical experience, real-time monitoring, and evidence-based pediatric protocols.
+            </p>
+            <p>
+              Our pediatric intensivists bring hands-on experience in managing complex medical emergencies, including respiratory failure, severe infections, neurological emergencies, cardiac conditions, and post-surgical critical care. Treatment plans are continuously reviewed and updated based on the child’s response, ensuring personalised and adaptive care rather than one-size-fits-all treatment.
+            </p>
+
+            <p>
+            Starlings follows standardised critical care guidelines, infection control protocols, and transparent communication practices, ensuring families understand every step of their child’s care journey. Parents are kept informed with clear updates, explained in simple language, because informed families build trust — and trust is essential in critical care.
+              </p>
+
+        </div>
+
+        <!-- Right Image -->
+        <div class="image-box" data-aos="fade-left">
+            <img src="images/ped1.png" alt="">
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="picu-services">
+
+    <div class="container">
+
+        <div class="picu-heading" data-aos="fade-up">
+            <h2>Conditions We Treat in PICU</h2>
+
+            <p>
+               24/7 availability of pediatric specialists, advanced diagnostics, emergency response systems, and intensive monitoring, our PICU functions as a reliable support system during the most critical moments. This combination of medical expertise, advanced infrastructure, and ethical care delivery makes Starlings a trusted choice for pediatric critical care in Hyderabad.
+            </p>
+        </div>
+
+        <div class="picu-grid">
+
+            <!-- Card 1 -->
+            <div class="picu-card gray" data-aos="fade-up">
+                <h3>✓ Severe Infections</h3>
+
+                <ul>
+                    <li>Pneumonia</li>
+                    <li>Sepsis</li>
+                    <li>Meningitis</li>
+                    <li>Dengue complications</li>
+                </ul>
+            </div>
+
+            <!-- Image 1 -->
+            <div class="picu-image" data-aos="zoom-in">
+                <img src="images/general4.png" alt="">
+            </div>
+
+            <!-- Card 2 -->
+            <div class="picu-card gray" data-aos="fade-up">
+                <h3>✓ Breathing & Respiratory Problems</h3>
+
+                <ul>
+                    <li>Severe asthma attacks</li>
+                    <li>Respiratory distress</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="picu-card yellow" data-aos="fade-up">
+                <h3>✓ Neurological Emergencies</h3>
+
+                <ul>
+                    <li>Seizures</li>
+                    <li>Head injury</li>
+                    <li>Encephalitis</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="picu-card blue-light" data-aos="fade-up">
+                <h3>✓ Post-operative Monitoring</h3>
+
+                <p>
+                    After complex or emergency surgeries
+                </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="picu-card blue-dark" data-aos="fade-up">
+                <h3>✓ Trauma & Accidents</h3>
+
+                <ul>
+                    <li>Falls</li>
+                    <li>Fractures</li>
+                    <li>Poisoning</li>
+                </ul>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="picu-card blue-light" data-aos="fade-up">
+                <h3>✓ Shock & Critical Illness</h3>
+
+                <ul>
+                    <li>Dehydration</li>
+                    <li>Low blood pressure</li>
+                    <li>Cardiac emergencies</li>
+                </ul>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="picu-image" data-aos="zoom-in">
+                <img src="images/general5.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="faq-section">
+    <div class="container">
+
+      
+
+        <!-- Right Content -->
+        <div class="faq-content" data-aos="fade-left">
+
+            <span class="faq-subtitle">
+              FAQs for Pediatric Intensive Care Unit</span>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+             <span class="faq-subtitle">
+            Questions parents & mothers commonly ask us.</span>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item active">
+                    <button class="faq-question">
+                    1. What is the PICU?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>    A specialised ICU for infants, children and teenagers who require close monitoring and advanced medical support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                      2. How long will my child stay in the PICU?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+It depends on the child’s condition and recovery progress
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                 3. Are parents allowed to visit?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                              Yes — Starlings follows a parent-friendly visitation policy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                  4. What equipment is used in PICU?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                             Ventilators, monitors, infusion pumps and other life-support systems.
+                    </div>
+                </div>
+
+
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                   5. Do you have 24×7 specialist care?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        <p>
+                              Yes — paediatric intensivists and critical care nurses are available round-the-clock.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            
+
+document.querySelectorAll('.faq-question').forEach(question => {
+
+    question.addEventListener('click', () => {
+
+        const item = question.parentElement;
+
+        document.querySelectorAll('.faq-item').forEach(faq => {
+            if (faq !== item) {
+                faq.classList.remove('active');
+            }
+        });
+
+        item.classList.toggle('active');
+    });
+
+});
+        </script>
+     
+
+
+
+          <!-- Left Image -->
+        <div class="faq-image" data-aos="fade-right">
+            <img src="images/neo2.png" alt="FAQ">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="blogs-section">
+  <div class="container">
+
+    <div class="blog-header">
+      <div>
+        <span class="sub-title">Read Our Latest News</span>
+        <h2>Featured Blogs and Insights</h2>
+      </div>
+
+      <div class="header-right">
+        <p>
+          Read the latest Blogs  about Starlings Childrens & Birthstoriess  Hospital well as medical news around the world. 
+        </p>
+
+        <a href="#" class="all-btn">
+          View All Blogs Post →
+        </a>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+
+      <!-- Card 1 -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/blog.png" alt="">
+          <div class="date-box">
+            <span>12</span>
+            <small>Jan</small>
+          </div>
+          <div class="image-overlay">
+        <span>By Starlings / Women Care</span>
+    </div>
+        </div>
+
+        <div class="blog-content">
+          <h3>
+            Carrying Life While Carrying a Career:
+            A Gentle Guide for Every Working Woman
+          </h3>
+
+          <a href="#">Continue Reading →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/blog1.png" alt="">
+          <div class="date-box">
+            <span>17</span>
+            <small>Jan</small>
+          </div>
+          <div class="image-overlay">
+        <span>By Starlings / Child Care</span>
+    </div>
+        </div>
+
+        <div class="blog-content">
+          <h3>
+            Is My Child's Growth Normal?
+            Parent’s Guide to Growth Milestones
+          </h3>
+
+          <a href="#">Continue Reading →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="blog-card">
+        <div class="blog-image">
+          <img src="images/blog2.png" alt="">
+          <div class="date-box">
+            <span>12</span>
+            <small>Jan</small>
+          </div>
+          <div class="image-overlay">
+        <span>By Starlings / None</span>
+    </div>
+        </div>
+
+        <div class="blog-content">
+          <h3>
+            The First 30 Days of Newborn Care:
+            A Reassuring Guide for New Parents
+          </h3>
+
+          <a href="#">Continue Reading →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
