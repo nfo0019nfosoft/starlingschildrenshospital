@@ -2647,3 +2647,409 @@ MOBILE
         font-size: 18px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MENOPAUSE INFO SECTION
+========================= */
+
+.meno-info-section{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.meno-info-card{
+    max-width: 650px;
+    width: 100%;
+    background: #ead8d4;
+    border-radius: 24px;
+    padding: 35px 40px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.meno-info-card:hover{
+    transform: translateY(-3px);
+}
+
+.meno-info-title{
+    font-size: 25px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.meno-info-list{
+    padding-left: 30px;
+    margin-bottom: 25px;
+}
+
+.meno-info-list li{
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+.meno-info-list li strong{
+    font-weight: 700;
+}
+
+.meno-info-text{
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #000;
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px){
+
+    .meno-info-section{
+        padding: 40px 15px;
+    }
+
+    .meno-info-card{
+        padding: 30px;
+    }
+
+    .meno-info-title{
+        font-size: 2.4rem;
+    }
+
+    .meno-info-list li,
+    .meno-info-text{
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px){
+
+    .meno-info-section{
+        padding: 25px 15px;
+    }
+
+    .meno-info-card{
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .meno-info-title{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .meno-info-list{
+        padding-left: 22px;
+        margin-bottom: 20px;
+    }
+
+    .meno-info-list li{
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+    .meno-info-text{
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+
+    .meno-info-card{
+        padding: 20px 18px;
+    }
+
+    .meno-info-title{
+        font-size: 1.7rem;
+    }
+
+    .meno-info-list li,
+    .meno-info-text{
+        font-size: 0.95rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+.nutrition-importance-section {
+    padding: 50px 50px;
+    background: #f3f3f3;
+}
+
+.nutrition-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Left Card */
+.nutrition-card {
+    flex: 1;
+    background: #efe5e2;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.nutrition-card h2 {
+    font-size: 35px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: #000;
+    font-weight: 700;
+}
+
+.nutrition-card p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.nutrition-card ul {
+    padding-left: 28px;
+}
+
+.nutrition-card li {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #000;
+}
+
+/* Right Image */
+.nutrition-image {
+    flex: 1;
+}
+
+.nutrition-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+@media (max-width: 991px) {
+
+    .nutrition-container {
+        flex-direction: column;
+    }
+
+    .nutrition-card {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .nutrition-card h2 {
+        font-size: 36px;
+    }
+
+    .nutrition-card p {
+        font-size: 18px;
+    }
+
+    .nutrition-card li {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .nutrition-image img {
+        height: 350px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .nutrition-importance-section {
+        padding: 30px 15px;
+    }
+
+    .nutrition-card {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .nutrition-card h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .nutrition-card p {
+        font-size: 17px;
+    }
+
+    .nutrition-card li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .nutrition-image img {
+        height: 260px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ovulation-section{
+    padding:50px 50px;
+    background:#f4f4f4;
+}
+
+.ovulation-container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:stretch;
+    gap:10px;
+}
+
+.ovulation-content{
+    flex:1;
+    background:#f0dfdb;
+    padding:40px 32px;
+    border-radius:22px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.12);
+}
+
+.ovulation-content h2{
+    font-size:35px;
+    line-height:1.1;
+    font-weight:700;
+    color:#000;
+    margin-bottom:25px;
+}
+
+.ovulation-content p{
+    font-size:18px;
+    line-height:1.7;
+    color:#000;
+    margin-bottom:10px;
+}
+
+.ovulation-image{
+    flex:1;
+}
+
+.ovulation-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+@media (max-width:991px){
+
+    .ovulation-container{
+        flex-direction:column;
+    }
+
+    .ovulation-content{
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .ovulation-content h2{
+        font-size:42px;
+        margin-bottom:20px;
+    }
+
+    .ovulation-content p{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    .ovulation-image img{
+        height:400px;
+        margin-top:15px;
+    }
+}
+
+@media (max-width:576px){
+
+    .ovulation-section{
+        padding:35px 15px;
+    }
+
+    .ovulation-content{
+        padding:25px 20px;
+        border-radius:18px;
+    }
+
+    .ovulation-content h2{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .ovulation-content p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .ovulation-image img{
+        height:250px;
+        object-fit:cover;
+    }
+}
