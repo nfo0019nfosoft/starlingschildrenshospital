@@ -1740,6 +1740,16 @@
     }
 }
 
+.quote-icon{
+    position:absolute;
+    top:20px;
+    right:60px;
+
+    color:#fff;
+    font-size:70px;
+    opacity:.9;
+}
+
 
 
 
