@@ -562,6 +562,33 @@
     }
 
 }
+  @media(max-width:992px){
+
+    .nav-links li{
+        position:relative;
+    }
+
+    .dropdown-toggle{
+        position:absolute;
+        right:0;
+        top:0;
+        width:50px;
+        height:52px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        cursor:pointer;
+        z-index:2;
+    }
+
+    .dropdown > a{
+        width:100%;
+        justify-content:flex-start !important;
+        padding-right:55px !important;
+    }
+}
 
 
 

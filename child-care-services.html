@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - Starlings Children&#039;s Hospital</title>
+
+<link rel="stylesheet" href="css/child-care-services.css">
+  <link rel="icon" type="image/png" href="images/pic.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="topbar-container">
+
+        <div class="topbar-left">
+
+            <div class="top-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Sindhi Colony, Begumpet, Secunderabad</span>
+            </div>
+
+            <div class="top-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:starlings.hyd@gmail.com">
+                    starlings.hyd@gmail.com
+                </a>
+            </div>
+
+            <div class="top-item">
+                <i class="far fa-clock"></i>
+                <span>24/7 Expert Care</span>
+            </div>
+
+        </div>
+
+        <div class="topbar-right">
+           <a href="appointment.html" class="topbar-btn">
+    Book An Appointment  
+    <i class="fas fa-arrow-right"></i>
+</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<nav class="navbar">
+      <div class="navbar-inner">
+    <div class="logo-container">
+        <div class="logos">
+            <img src="images/logo1.png" alt="Starlings Logo">
+            <img src="images/logo2.png" alt="Birth Stories">
+        </div>
+        <p class="tagline">Patient First, Empathy Always</p>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <!-- Child Care -->
+    <li class="dropdown">
+        <a href="child-care.html">Child Care <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+            <li><a href="general-pediatrics.html">General Pediatrics</a></li>
+            <li><a href="neonatal-intensive-care-unit.html">Neonatal Intensive Care Unit</a></li>
+            <li><a href="pediatric-intensive-care-unit.html">Pediatric Intensive Care Unit</a></li>
+            <li><a href="childrens-nutrition.html">Childrens Nutrition</a></li>
+            <li><a href="pediatric-allergy.html">Pediatric Allergy</a></li>
+            <li><a href="development-and-behavioural-pediatrics.html">Development and Behavioural Pediatrics</a></li>
+            <li><a href="pediatric-surgery-and-laparoscopy.html">Pediatric Surgery and Laparoscopy</a></li>
+            <li><a href="pediatric-orthopedics.html">Pediatric Orthopedics</a></li>
+            <li><a href="pediatric-urology.html">Pediatric Urology</a></li>
+            <li><a href="pediatric-neurology.html">Pediatric Neurology</a></li>
+        </ul>
+    </li>
+
+    <!-- Women Care -->
+    <li class="dropdown">
+        <a href="women-care.html">Women Care <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+            <li><a href="obstetrics-and-gynecology.html">Obstetrics & Gynecology</a></li>
+            <li><a href="pregnancy-and-delivery.html">Pregnancy & Delivery</a></li>
+            <li><a href="painless-delivery-and-labor.html">Painless Delivery & Labor</a></li>
+            <li><a href="vaginal-birth-after-caesarean.html">Vaginal Birth After Caesarean</a></li>
+            <li><a href="childbirth-preparation-classes.html">Childbirth Preparation Classes</a></li>
+            <li><a href="high-risk-pregnancy.html">High Risk Pregnancy</a></li>
+            <li><a href="lactation.html">Lactation</a></li>
+            <li><a href="breast-feeding-support.html">Breast Feeding Support</a></li>
+            <li><a href="breast-care-clinic.html">Breast Care Clinic</a></li>
+            <li><a href="preconception-counselling.html">Preconception Counselling</a></li>
+            <li><a href="pre-pregnancy-health-check-up.html">Pre-pregnancy Health Checkup</a></li>
+            <li><a href="gynecological-endoscopic-surgeries.html">Gynecological Endoscopic Surgeries</a></li>
+            <li><a href="laparoscopic-surgeries.html">Laparoscopic Surgeries</a></li>
+            <li><a href="well-woman-checkup.html">Well Woman Checkup</a></li>
+            <li><a href="menopause-and-perimenopause.html">Menopause & Perimenopause</a></li>
+            <li><a href="women-nutrition.html">Women’s Nutrition</a></li>
+            <li><a href="ovulation-induction.html">Ovulation Induction</a></li>
+        </ul>
+    </li>
+
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+    </div>
+</nav>
+<script>
+    const menuBtn = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+
+/* Menu Toggle */
+
+menuBtn.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+    const icon = menuBtn.querySelector("i");
+
+    if(navMenu.classList.contains("active")){
+        icon.classList.replace("fa-bars","fa-times");
+    }else{
+        icon.classList.replace("fa-times","fa-bars");
+    }
+
+});
+
+/* Mobile Dropdown */
+
+document.querySelectorAll(".dropdown > a").forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        if(window.innerWidth <= 992){
+
+            const currentDropdown = this.closest(".dropdown");
+
+            // Dropdown close unte first open cheyyi
+            if(!currentDropdown.classList.contains("active")){
+
+                e.preventDefault();
+
+                document.querySelectorAll(".dropdown").forEach(dropdown => {
+
+                    if(dropdown !== currentDropdown){
+                        dropdown.classList.remove("active");
+                    }
+
+                });
+
+                currentDropdown.classList.add("active");
+            }
+
+            // Active already unte link normal ga open avthundi
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+
+
+
+<section class="about-section">
+
+    <div class="about-box">
+
+        <!-- IMAGE -->
+        <div class="about-image">
+            <img src="images/child4.png" alt="About">
+            
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <h2>Contact Us</h2>
+
+                <div class="breadcrumb">
+<a>Comprehensive Healthcare for Women and Children at Every Stage of Life</a>
+                    <!-- <span>→</span>
+                    <a href="#">Contact Us</a> -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="about-bottom">
+
+            <div class="about-text">
+                <p>
+                  
+                  At <b>Starlings & Birthstories</b>, we provide specialized care for women and children under one roof. From advanced maternity services to expert pediatric care, our team ensures safety, compassion, and clinical excellence at every step.
+                </p>
+            </div>
+
+            <div class="support-box">
+
+                <div class="call-icon">
+                    <i class="fas fa-phone-volume"></i>
+                </div>
+
+                <div>
+                    <span>Call Us When You Need Help!</span>
+
+                    <h4>24/7 Support:<br> +91 9063837116  |</h4>
+                    <h4>+91 9063837117</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="why-section">
+    <div class="container">
+
+        <div class="why-grid">
+
+            <!-- Card 1 -->
+            <div class="why-card card-light"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+                <div class="icon-box">
+                    <i class="fas fa-flag"></i>
+                </div>
+
+                <h3>Our Commitment</h3>
+
+                <p>
+                    We are committed to delivering safe,
+                    compassionate, and evidence-based
+                    healthcare for both women and children.
+                    From pregnancy care to advanced pediatric
+                    treatments, our focus is on clinical excellence,
+                    patient comfort, and continuous family support
+                    at every stage of life.
+                </p>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="why-card card-blue"
+                 data-aos="fade-up"
+                 data-aos-delay="250">
+
+                <div class="icon-box">
+                    <i class="fas fa-plus"></i>
+                </div>
+
+                <h3>Why Choose Us?</h3>
+
+                <p>
+                    Choosing the right hospital for your family
+                    matters. Our integrated mother and child care
+                    model combines experienced specialists,
+                    advanced infrastructure, and personalized
+                    treatment plans to ensure accurate diagnosis,
+                    safe procedures, and better health outcomes.
+                </p>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="why-card card-yellow"
+                 data-aos="fade-up"
+                 data-aos-delay="400">
+
+                <div class="icon-box">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+
+                <h3>Our Doctors</h3>
+
+                <p>
+                    Our team of pediatricians, neonatologists,
+                    gynecologists, and obstetric specialists brings
+                    years of clinical expertise in managing routine
+                    to complex conditions. Every patient receives
+                    individualized care backed by advanced
+                    technology and compassionate communication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="child-journey-section">
+    <div class="child-journey-wrapper">
+
+        <div class="child-journey-content">
+
+            <span class="child-journey-tag">
+                Working Together for a Healthy Childhood
+            </span>
+
+            <h2>
+                Supporting Children on <br>
+                Their Health Care Journey
+            </h2>
+
+            <p>
+                At <strong>Starlings Children’s Hospital</strong>,
+                we partner closely with parents to ensure every child receives timely, compassionate, and expert medical care. From preventive checkups to specialized pediatric treatments, our approach focuses on early diagnosis, continuous monitoring, and long-term well-being—supporting children through every stage of growth with care and confidence.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="services-section">
+    <div class="container">
+
+       <div class="section-header">
+    <span>We Provide the Best Pediatric Care for Your Child</span>
+
+    <h2>Our Child Care Services</h2>
+
+    <p>
+        <strong>At Starlings Children's Hospital</strong>, we offer a comprehensive range
+        of child care services covering preventive care, advanced diagnostics,
+        and specialized pediatric treatments. Our services are designed to
+        support children from birth through adolescence with expert medical
+        attention and compassionate care.
+    </p>
+</div>
+
+        <!-- Tabs -->
+        <div class="tabs-wrapper">
+            <button class="arrow-btn" id="prevBtn">
+                &#8592;
+            </button>
+
+            <div class="tabs-container" id="tabsContainer">
+                <button class="service-tab active"
+                    data-title="Primary medical care for children of all age groups"
+                    data-img="images/c1.png"
+                    data-desc="General Paediatrics at Starlings Children’s Hospital provides first-level medical care for infants, children, and adolescents. This service focuses on preventive healthcare, timely diagnosis, and management of common childhood illnesses.
+
+Paediatricians assess growth milestones, monitor overall development, and treat conditions such as fever, infections, respiratory issues, digestive concerns, and nutritional problems. Parents are guided on vaccinations, routine health monitoring, and when specialist care may be required.">
+
+                    General Pediatrics
+                </button>
+
+                <button class="service-tab"
+                    data-title="Specialised medical care for newborns requiring close monitoring"
+                    data-img="images/c2.png"
+                    data-desc="The Neonatal Intensive Care Unit (NICU) is designed for newborns who need advanced medical support after birth. This includes premature babies, low birth weight infants, and newborns with medical complications.
+
+The unit is equipped for continuous monitoring and is managed by trained neonatologists and neonatal nursing staff. Care focuses on stabilisation, respiratory support, infection management, and gradual recovery during the early neonatal period.">
+
+                    Neonatal Intensive Care Unit
+                </button>
+
+                <button class="service-tab"
+                    data-title="Intensive care for children with serious or critical conditions"
+                    data-img="images/c3.png"
+                    data-desc="The Paediatric Intensive Care Unit (PICU) provides advanced medical care for children who require continuous monitoring and intensive treatment. This includes severe infections, respiratory distress, neurological conditions, and post-surgical recovery.
+
+A multidisciplinary medical team ensures close observation, timely intervention, and coordinated care until the child’s condition stabilises.">
+
+                    Pediatric Intensive Care Unit
+                </button>
+
+                <button class="service-tab"
+                    data-title="Assessment and guidance for healthy growth and development"
+                    data-img="images/c4.png"
+                    data-desc="Children’s Nutrition services focus on evaluating dietary needs and addressing nutrition-related concerns that may affect a child’s growth and health. This includes feeding difficulties, undernutrition, overweight, and micronutrient deficiencies.
+
+Care involves nutritional assessment, dietary counselling, and guidance for parents to support age-appropriate and balanced nutrition.">
+
+                    Childrens Nutrition
+                </button>
+
+                <button class="service-tab"
+                    data-title="Diagnosis and long-term management of allergic conditions"
+                    data-img="images/c5.png"
+                    data-desc="Paediatric Allergy services address allergic conditions that commonly affect children, such as asthma, allergic rhinitis, eczema, food allergies, and recurrent allergy-related symptoms.
+
+Evaluation focuses on identifying triggers, managing symptoms, and reducing the risk of complications through appropriate treatment and follow-up.">
+
+                    Pediatric Allergy
+                </button>
+
+                <button class="service-tab"
+                    data-title="Evaluation and early support for developmental concerns"
+                    data-img="images/c6.png"
+                    data-desc="This service supports children who show delays or concerns in speech, learning, behaviour, or social development. Early identification allows timely intervention and appropriate guidance.
+
+Assessment is carried out using standard developmental evaluation methods, followed by recommendations for therapy, behavioural strategies, or specialist support when required.">
+
+                    Development & Behavioural Pediatrics
+                </button>
+
+                <button class="service-tab"
+                    data-title="Surgical care tailored for infants and children"
+                    data-img="images/c7.png"
+                    data-desc="Paediatric Surgery services provide surgical treatment for conditions requiring operative management in children. Both conventional and minimally invasive (laparoscopic) procedures are offered, depending on clinical need.
+
+Care includes pre-surgical evaluation, child-specific anaesthesia, and post-operative monitoring to support safe recovery.">
+
+                    Pediatric Surgery & Laparoscopy
+                </button>
+
+                <button class="service-tab"
+                    data-title="Diagnosis and treatment of bone and joint conditions in children"
+                    data-img="images/c8.png"
+                    data-desc="Paediatric Orthopaedics focuses on musculoskeletal conditions affecting growing children. This includes fractures, congenital bone conditions, gait abnormalities, and growth-related orthopaedic issues.
+
+Treatment plans are designed to support proper bone development, movement, and long-term physical function">
+
+                    Pediatric Orthopedics
+                </button>
+
+                <button class="service-tab"
+                    data-title="Medical and surgical care for urinary conditions in children"
+                    data-img="images/c9.png"
+                    data-desc="Paediatric Urology services manage conditions affecting the urinary tract and kidneys in children. This includes congenital abnormalities, infections, and functional urinary concerns.
+
+Care is provided with attention to comfort, privacy, and age-appropriate medical support.">
+
+                    Pediatric Urology
+                </button>
+
+                <button class="service-tab"
+                    data-title="Care for neurological conditions affecting children"
+                    data-img="images/c10.png"
+                    data-desc="Paediatric Neurology focuses on diagnosing and managing conditions involving the brain, spinal cord, and nervous system. Common concerns include seizures, developmental neurological conditions, and neuromuscular disorders.
+
+Care involves clinical evaluation, monitoring, and long-term management in coordination with other paediatric specialists">
+
+                    Pediatric Neurology
+                </button>
+            </div>
+
+            <button class="arrow-btn" id="nextBtn">
+                &#8594;
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="service-content">
+
+            <div class="service-image">
+                <img id="serviceImage"
+                    src="images/c1.png"
+                    alt="">
+            </div>
+
+            <div class="service-text">
+                <h3 id="serviceTitle">
+                    Primary medical care for children of all age groups
+                </h3>
+
+                <p id="serviceDescription">
+                  General Paediatrics at Starlings Children’s Hospital provides first-level medical care for infants, children, and adolescents. This service focuses on preventive healthcare, timely diagnosis, and management of common childhood illnesses. Paediatricians assess growth milestones, monitor overall development, and treat conditions such as fever, infections, respiratory issues, digestive concerns, and nutritional problems. Parents are guided on vaccinations, routine health monitoring, and when specialist care may be required.
+                </p>
+
+               <div class="service-label" id="serviceLabel">
+    General Pediatrics
+</div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script>
+const tabs = document.querySelectorAll(".service-tab");
+
+const title = document.getElementById("serviceTitle");
+const desc = document.getElementById("serviceDescription");
+const image = document.getElementById("serviceImage");
+const label = document.getElementById("serviceLabel");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        tab.classList.add("active");
+
+        title.textContent = tab.dataset.title;
+        desc.textContent = tab.dataset.desc;
+        image.src = tab.dataset.img;
+
+        // Yellow Button Text Change
+        label.textContent = tab.textContent.trim();
+
+        // Yellow Button Link Change
+        label.href = tab.dataset.link;
+    });
+
+});
+
+// Arrow Scroll
+const container = document.getElementById("tabsContainer");
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    container.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+    container.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="services-section">
+    <div class="container">
+
+       <div class="section-header">
+    <span>We Provide the Best Women Care for</span>
+
+    <h2>Our Women Care Services</h2>
+
+    <p>
+        <strong>At Starlings Children's Hospital</strong>, we provide comprehensive women’s healthcare services designed to support every stage of a woman’s life — from adolescence and pre-pregnancy planning to maternity care and menopause management. Our approach combines advanced medical expertise with compassionate, patient-centered care.
+</div>
+
+        <!-- Tabs -->
+        <div class="tabs-wrapper">
+            <button class="arrow-btn" id="womenPrevBtn">
+                &#8592;
+            </button>
+
+           <div class="tabs-container" id="womenTabsContainer">
+                <button class="women-tab active"
+                    data-title="Comprehensive obstetric and gynecological care for women of all ages"
+                    data-img="images/w1.png"
+                    data-desc="Our Obstetrics & Gynecology department offers complete care for menstrual disorders, PCOS, fibroids, infections, hormonal imbalances, and reproductive health concerns. We focus on early diagnosis, preventive screening, and personalized treatment plans to ensure long-term wellness and comfort.">
+
+                   Obstetrics & Gynecology
+                </button>
+
+                <button class="women-tab"
+                    data-title="Safe and personalized maternity care"
+                    data-img="images/w2.png"
+                    data-desc="We provide complete antenatal care, pregnancy monitoring, and delivery services with experienced obstetricians and modern labor rooms. From routine pregnancies to high-risk cases, our team ensures mother and baby safety at every stage.">
+
+                    Pregnancy & Delivery   
+                </button>
+
+                <button class="women-tab"
+                    data-title="Comfortable childbirth with advanced pain management"
+                    data-img="images/w3.png"
+                    data-desc="Our painless delivery services include epidural and modern labor pain management techniques to ensure a safer and more comfortable childbirth experience under expert supervision.">
+
+                    Painless Delivery & Labor     
+                </button>
+
+                <button class="women-tab"
+                    data-title="Safe and carefully monitored VBAC options"
+                    data-img="images/w4.png"
+                    data-desc="We offer expert evaluation and monitoring for women considering VBAC. Our specialists assess eligibility and provide safe, evidence-based support throughout labor.">
+
+                     Vaginal Birth After Caesarean (VBAC) 
+                </button>
+
+                <button class="women-tab"
+                    data-title="Empowering parents through guided prenatal education"
+                    data-img="images/w5.png"
+                    data-desc="Our classes prepare expecting mothers and families for labor, delivery, newborn care, and breastfeeding with structured sessions led by experienced professionals.">
+
+                      Childbirth Preparation Classes 
+                </button>
+
+
+
+                
+                <button class="women-tab"
+                    data-title="Advanced monitoring for complex pregnancies"
+                    data-img="images/w6.png"
+                    data-desc="We specialize in managing high-risk pregnancies involving conditions such as hypertension, diabetes, multiple gestation, or previous complications. Continuous monitoring and specialist coordination ensure better outcomes.">
+
+                 High Risk Pregnancy   
+                </button>
+
+
+                <button class="women-tab"
+                    data-title="Expert lactation guidance for new mothers"
+                    data-img="images/w7.png"
+                    data-desc="Our lactation consultants provide hands-on support for breastfeeding challenges, milk supply concerns, latching issues, and newborn feeding guidance.">
+
+                    Lactation & Breastfeeding Support     
+                </button>
+
+                <button class="women-tab"
+                    data-title="Specialized evaluation for breast health"
+                    data-img="images/w8.png"
+                    data-desc="We provide screening, diagnostic evaluation, and treatment planning for breast pain, lumps, infections, and preventive breast health management">
+
+                  Breast Care Clinic
+                </button>
+
+                <button class="women-tab"
+                    data-title="Preparing for a healthy pregnancy"
+                    data-img="images/w9.png"
+                    data-desc="Our preconception counselling services focus on lifestyle guidance, medical assessment, nutritional planning, and risk evaluation to ensure optimal maternal health before conception.">
+
+                   Preconception Counselling 
+                </button>
+
+                <button class="women-tab"
+                    data-title="Complete assessment before conception"
+                    data-img="images/w10.png"
+                    data-desc="Comprehensive health screening including hormonal evaluation, infection screening, nutritional assessment, and chronic disease management before pregnancy planning.">
+
+                      Pre-Pregnancy Health Checkup   
+                </button>
+
+               
+
+                  <button class="women-tab"
+                     data-title="Minimally invasive gynecological procedures"
+                    data-img="images/w11.png"
+               data-desc="dvanced endoscopic techniques for treating fibroids, cysts, endometriosis, and other gynecological conditions with faster recovery and reduced hospital stay">
+
+
+                    Gynecological Endoscopic Surgeries   
+                </button>
+
+
+                  <button class="women-tab"
+                     data-title="Advanced minimally invasive surgical care"
+                    data-img="images/w12.png"
+  data-desc="State-of-the-art laparoscopic procedures performed by experienced gynecological surgeons ensuring precision, safety, and quicker recovery.">
+
+
+                         Laparoscopic Surgeries                  
+                </button>
+
+
+                  <button class="women-tab"
+                      data-title="Preventive screening for long-term health"
+                    data-img="images/w13.png"
+                                      data-desc="Routine health screening including Pap smear, breast examination, hormonal assessment, and lifestyle evaluation for early detection and prevention">
+                     Well Woman Checkup    
+                </button>
+
+
+
+                  <button class="women-tab"
+                    data-title="Hormonal and lifestyle management"
+                    data-img="images/w14.png"
+                    data-desc="Comprehensive support for managing menopausal symptoms, hormonal imbalances, bone health, and long-term wellness.">
+
+                      Menopause & Perimenopause   
+                </button>
+
+
+                
+                  <button class="women-tab"
+                    data-title="Personalized nutrition planning for every stage"
+                    data-img="images/w15.png"
+                    data-desc="Nutritional counselling for pregnancy, PCOS, hormonal balance, weight management, and postnatal recovery.">
+
+                       Women’s Nutrition  
+                </button>
+
+
+
+
+                
+                  <button class="women-tab"
+                    data-title="Fertility support and ovulation monitoring"
+                    data-img="images/w16.png"
+                    data-desc="Medical evaluation and ovulation induction treatments to support conception under expert gynecological supervision">
+
+                          Ovulation Induction   
+                </button>
+            </div>
+
+            <button class="arrow-btn" id="womenNextBtn">
+                &#8594;
+            </button>
+        </div>
+
+        <!-- Content -->
+       <div class="service-content">
+
+    <div class="service-image">
+        <img id="womenServiceImage"
+             src="images/w1.png"
+             alt="">
+    </div>
+
+    <div class="service-text">
+
+        <h3 id="womenServiceTitle">
+            Comprehensive obstetric and gynecological care for women of all ages
+        </h3>
+
+        <p id="womenServiceDescription">
+            Our Obstetrics & Gynecology department offers complete care for menstrual disorders, PCOS, fibroids, infections, hormonal imbalances, and reproductive health concerns. We focus on early diagnosis, preventive screening, and personalized treatment plans to ensure long-term wellness and comfort.
+        </p>
+
+        <div class="service-label" id="womenServiceLabel">
+            Obstetrics & Gynecology
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+const womenTabs = document.querySelectorAll(".women-tab");
+
+const womenTitle =
+document.getElementById("womenServiceTitle");
+
+const womenDesc =
+document.getElementById("womenServiceDescription");
+
+const womenImage =
+document.getElementById("womenServiceImage");
+
+const womenLabel =
+document.getElementById("womenServiceLabel");
+
+womenTabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        womenTabs.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        tab.classList.add("active");
+
+        womenTitle.textContent =
+            tab.dataset.title;
+
+        womenDesc.textContent =
+            tab.dataset.desc;
+
+        womenImage.src =
+            tab.dataset.img;
+
+        womenLabel.textContent =
+            tab.textContent.trim();
+    });
+
+});
+
+const womenContainer =
+document.getElementById("womenTabsContainer");
+
+document.getElementById("womenNextBtn")
+.addEventListener("click", () => {
+
+    womenContainer.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+
+});
+
+document.getElementById("womenPrevBtn")
+.addEventListener("click", () => {
+
+    womenContainer.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="care-section">
+ <div class="care-container">
+  <div class="care-heading" data-aos="fade-up">
+        <!-- <h2>24/7 Child & Women Care Hospital</h2> -->
+
+        <p>
+           At Starlings and Birthstories, we bring together trusted doctors, advanced technology, and world-class care to ensure the safest experience for every child and every mother.
+        </p>
+    </div>
+
+    <!-- Slider -->
+
+    <div class="feature-slider">
+
+        <div class="feature-track">
+
+            <!-- 1 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-circle">
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+
+                <h3>Trusted Pediatricians With Years of Expertise</h3>
+
+                <p>
+                Our team includes highly experienced pediatricians, neonatologists, pediatric surgeons, and specialists, making us one of the Best Children’s Hospitals in Hyderabad.</p>
+            </div>
+
+            <!-- 2 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+
+                <h3>Advanced NICU and PICU for Critical Care</h3>
+
+                <p>
+                 Equipped with Level III NICU and state-of-the-art PICU, we provide life-saving care for premature babies, high-risk newborns, and critically ill children.</p></div>
+
+         
+
+            <!-- 4 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>24/7 Pediatric Emergency Services</h3>
+
+                <p>
+                  Immediate care for fever, seizures, breathing difficulties, injuries, and infections — making us the most reliable Pediatric Emergency Hospital near Begumpet & Secunderabad.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h3>Complete Multispecialty Childcare Under One Roof</h3>
+
+                <p>
+                   From General Pediatrics, Orthopedics, Neurology, Allergy, ENT, Dermatology, Nutrition, Urology, to Pediatric Surgery, we offer every specialty your child may need.</p>
+            </div>
+
+            <!-- 6 -->
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-baby"></i>
+                </div>
+
+                <h3>Child-Friendly Approach With Family Support</h3>
+
+                <p>
+                 Our care model is built around comfort, communication & compassion — ensuring children feel safe and parents feel supported at every step.</p>
+            </div>
+<!-- 7 -->
+
+
+         
+
+        </div>
+<div class="slider-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+    <span class="dot" data-slide="3"></span>
+    <span class="dot" data-slide="4"></span>
+   
+   
+</div>
+
+    </div>
+
+    <!-- Youtube -->
+
+    <!-- <div class="video-box">
+
+        <iframe
+            src="https://www.youtube.com/embed/h7A55c9a0gg"
+            title="YouTube video"
+            allowfullscreen>
+        </iframe>
+
+    </div> -->
+    </div>
+
+</section>
+
+
+<script>
+    const track = document.querySelector(".feature-track");
+const dots = document.querySelectorAll(".dot");
+
+// First cards clone
+track.innerHTML += track.innerHTML;
+
+let currentIndex = 0;
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        currentIndex = index;
+
+        dots.forEach(d => d.classList.remove("active"));
+        dot.classList.add("active");
+
+        const card = document.querySelectorAll(".feature-card")[index];
+
+        track.style.transform =
+            `translateX(-${card.offsetLeft}px)`;
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+<section class="reviews-section">
+
+    <div class="container">
+
+        <div class="review-heading">
+            <span>Why Families Trust Our Child & Women Care in Hyderabad</span>
+            <h2>What Our Patients Say</h2>
+        </div>
+        <div class="quote-icon">
+    <i class="fa-solid fa-quote-left"></i>
+</div>
+
+        <div class="review-wrapper">
+
+            <!-- Left Google Box -->
+
+            <div class="google-box">
+
+                <div class="google-header">
+
+                    <img src="images/pic.png" alt="Hospital">
+
+                    <div class="hospital-info">
+
+                        <h3>
+                            Starlings Children's Hospital
+                        </h3>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            54 Google reviews
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x3bcb9bcdea37ac9d:0x216d4cd277533f29!12e1" class="review-btn">
+                    Write a review
+                </a>
+
+            </div>
+
+            <!-- Reviews Slider -->
+
+            <div class="reviews-slider">
+
+                <div class="swiper reviewSwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <!-- Review 1 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar green">
+                                        N
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Nikita Jain</h4>
+                                        <span>4 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                      Amazing paediatric services. Doctor is very polite and address all the questions patiently. No much waiting time and engaging play area for kids to divert them from vaccimation procedure.
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Review 2 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar brown">
+                                        S
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Srinu Sabhavath</h4>
+                                        <span>5 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                       ⭐⭐⭐⭐⭐ Exceptional Care & Wonderful Experience at Starling Children Hospital
+
+On 31/12/2025, God blessed us with a baby girl, and our entire journey at Starling Children Hospital was truly memorable and comforting.
+
+I express my heartfelt and sincere gratitude to Dr. Deepa Ganji Madam (Gynecologist). From the bottom of my heart, I thank her for her outstanding care, expertise, and dedication. She is an exceptional doctor, very simple, humble, calm, and approachable. Madam explained every procedure clearly and patiently, which gave us great confidence and peace of mind. The surgery was performed extremely well, and her professionalism and experience are truly admirable.
+
+I would also like to extend my sincere thanks to Dr. Hrudhay Ranjan Sir (Pediatrician). He explained everything regarding the baby’s health very clearly and patiently. His guidance and friendly approach made us feel very comfortable and confident as new parents.
+
+A special appreciation to the entire nursing staff and support team — they were very caring, polite, attentive, and supportive throughout our stay. They took excellent care of both my newborn baby and my wife, day and night, with great dedication and kindness.
+
+The hospital environment is very clean, hygienic, and well-maintained. Every staff member was cooperative, and the overall management was smooth and professional.
+
+Once again, thank you so much to Dr. Deepa Ganji Madam, Dr. Hrudhay Ranjan Sir, and the entire Starling Children Hospital team for making this beautiful moment of our lives safe, comfortable, and memorable.
+
+I highly recommend Starling Children Hospital to anyone looking for the best maternity and pediatric care
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Review 3 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar green">
+                                        A
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Abhishek Bollu</h4>
+                                        <span>5 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+<p class="review-text">
+   Excellent experience with Dr. Deepa Madam Very professional, knowledgeable, and supportive throughout the pregnancy and delivery. The care provided to my wife was outstanding, and everything was explained clearly.
+Also, Dr. Hruday provided excellent care for our newborn. Very gentle, attentive, and informative. We felt confident and reassured under their care. We Highly recommended both for pregnancy and paediatric patients
+</p>
+
+<button class="read-more-btn">
+    Read more
+</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Review 4 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar blue">
+                                        ch
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>ch roopa</h4>
+                                        <span>5 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                     I want to share my experience . Nice hospital.i came to know about this hospital through my frnds circle . Drs are very frndly and treatment was accurate and explained everything in detail . Staff are very polite .
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                       <!-- Review 5 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar brown">
+                                        N
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Nausheen Begum</h4>
+                                        <span>6 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                    Very nice hospital
+Good staff
+Good service
+Humble staff
+Starling name is just for this hospital only doctor's are like stars and staff is like darlings both mix starling 😘
+Very happy I got this hospital for my second delivery felt blessed 😇😇
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                       <!-- Review 6 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar green">
+                                        P
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Pooja Ved</h4>
+                                        <span>6 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                    A Heartfelt Thank You to the Entire Hospital Team!!
+
+We recently visited the hospital for my child’s treatment, and I cannot express enough how grateful we are for the exceptional care we received. From the moment we walked in, the entire staff made us feel welcomed, supported, and reassured.
+
+The doctors (Dr. Vamshi, Dr. Majid & Dr. Umer) were truly amazing and extremely knowledgeable, patient, and thorough. The way they examined everything with such minute attention to detail gave us complete confidence that our child was in the best possible hands. Their clear explanations, calm approach, and genuine concern for our child’s well-being made a world of difference.
+A very special mention to Dr. Vamshi — he was truly amazing
+
+The nursing staff was equally outstanding. Every nurse we interacted with was kind, attentive, and highly professional. They were always available when needed and carried out every procedure with skill and care. Their warm attitude kept our child comfortable throughout the stay, and we could see how dedicated they were to their work.
+
+The "entire hospital team" — from reception to support staff — was extremely helpful and welcoming. Everyone worked smoothly and efficiently, making the entire experience stress-free. The coordination, responsiveness, and positivity we experienced are truly commendable.
+
+We are very happy with how well our child responded to the treatment, and we are deeply thankful for the excellent care provided. The team’s commitment, expertise, and compassion made a difficult situation much easier for us as parents.
+
+A big thank you to the doctors, nurses, and every member of the hospital staff. Your efforts, professionalism, and kindness will always be remembered.
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                        
+                       <!-- Review 7 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar blue">
+                                        M
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Manisha rani</h4>
+                                        <span>6 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+Excellent billing services 😊
+Billing experience could use some improvement...👍
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        
+
+
+                        
+                       <!-- Review 8 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar brown">
+                                        A
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>Akhila Jarugum</h4>
+                                        <span>7 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+                                        * polite words in billing staff.
+* Billing Staff Receiving in The patient's is Good And Excellent
+ 
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        
+                       <!-- Review 9-->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar blue">
+                                        B
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>bairarani</h4>
+                                        <span>7 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+Chala manchi hospital ma papa ke chala baga chusukunaru Mony kuda chala thakuva thisukunaru doctor vamsh and hruday ranjan sir valu chala baga chusukunaru
+Hide
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        
+
+
+                        
+                       <!-- Review 10 -->
+
+                        <div class="swiper-slide">
+
+                            <div class="review-card">
+
+                                <div class="google-icon">
+                                    <img src="images/google.png" alt="">
+                                </div>
+
+                                <div class="user">
+
+                                    <div class="avatar brown">
+                                        P
+                                    </div>
+
+                                    <div class="user-details">
+                                        <h4>
+Prashanth Reddy</h4>
+                                        <span>7 months ago</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="rating">
+                                    ★★★★★ <span class="verify">✔</span>
+                                </div>
+
+                                <div class="review-content">
+
+                                    <p class="review-text">
+This is very good hospital for children and very good care for neonatal intensive care unit All doctor and nursing staff are good very experience in this field and the hospital should be cleared environment
+                                    </p>
+
+                                    <button class="read-more-btn">
+                                        Read more
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <!-- Navigation -->
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    // =========================
+    // REVIEW SWIPER
+    // =========================
+
+    const reviewSwiperEl = document.querySelector(".reviewSwiper");
+
+    if (reviewSwiperEl) {
+        new Swiper(".reviewSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1200: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
+
+    // =========================
+    // READ MORE BUTTON
+    // =========================
+
+    document.querySelectorAll(".read-more-btn").forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const card = this.closest(".review-card");
+
+            if (!card) return;
+
+            card.classList.toggle("active");
+
+            this.textContent = card.classList.contains("active")
+                ? "Read less"
+                : "Read more";
+        });
+
+    });
+
+    // =========================
+    // COUNTER SECTION (SAFE)
+    // =========================
+
+    const counterSection = document.querySelector(".counter-section");
+
+    if (counterSection) {
+
+        let started = false;
+
+        function runCounters() {
+
+            const rect = counterSection.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && !started) {
+
+                started = true;
+
+                const counters = document.querySelectorAll(".counter");
+
+                counters.forEach(counter => {
+
+                    const target = +counter.getAttribute("data-target");
+                    let count = 0;
+
+                    const updateCounter = () => {
+
+                        const increment = target / 100;
+
+                        if (count < target) {
+
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+
+                            requestAnimationFrame(updateCounter);
+
+                        } else {
+
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCounter();
+
+                });
+            }
+        }
+
+        window.addEventListener("scroll", runCounters);
+        runCounters();
+    }
+
+});
+</script>
+
+
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -25,28 +25,30 @@ document.querySelectorAll(".dropdown > a").forEach(link => {
 
         if(window.innerWidth <= 992){
 
-            e.preventDefault();
-
             const currentDropdown = this.closest(".dropdown");
 
-            // Close all other dropdowns
-            document.querySelectorAll(".dropdown").forEach(dropdown => {
+            // Dropdown close unte first open cheyyi
+            if(!currentDropdown.classList.contains("active")){
 
-                if(dropdown !== currentDropdown){
-                    dropdown.classList.remove("active");
-                }
+                e.preventDefault();
 
-            });
+                document.querySelectorAll(".dropdown").forEach(dropdown => {
 
-            // Toggle current dropdown
-            currentDropdown.classList.toggle("active");
+                    if(dropdown !== currentDropdown){
+                        dropdown.classList.remove("active");
+                    }
+
+                });
+
+                currentDropdown.classList.add("active");
+            }
+
+            // Active already unte link normal ga open avthundi
         }
 
     });
 
 });
-
-
 
 // AOS
 AOS.init({
