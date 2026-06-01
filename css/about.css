@@ -660,7 +660,7 @@
 }
 .breadcrumb{
     position:absolute;
-    right:-450px;
+    right:-350px;
     bottom:20px;
 
     display:flex;
@@ -1930,10 +1930,7 @@
     }
 
     .quote-icon{
-        top:15px;
-        right:15px;
-        font-size:45px;
-        opacity:.25;
+        display: none;
     }
 
     .review-heading{
@@ -2109,7 +2106,7 @@
     }
 
     .quote-icon{
-        font-size:35px;
+        display: none;
     }
 }
 .quote-icon{

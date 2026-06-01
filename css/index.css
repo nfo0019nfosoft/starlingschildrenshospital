@@ -1740,15 +1740,6 @@
     }
 }
 
-.quote-icon{
-    position:absolute;
-    top:20px;
-    right:60px;
-
-    color:#fff;
-    font-size:70px;
-    opacity:.9;
-}
 
 
 
@@ -2380,9 +2371,6 @@
 /* =========================
    MOBILE
 ========================= */
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width:768px){
 
@@ -2397,10 +2385,7 @@
     }
 
     .quote-icon{
-        top:15px;
-        right:15px;
-        font-size:45px;
-        opacity:.25;
+       display:none;
     }
 
     .review-heading{
@@ -2580,6 +2565,15 @@
     }
 }
 
+.quote-icon{
+    position:absolute;
+    top:20px;
+    right:60px;
+
+    color:#fff;
+    font-size:70px;
+    opacity:.9;
+}
 
 
 
