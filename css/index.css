@@ -1069,7 +1069,7 @@
 
 .rating-strip{
     max-width:1400px;
-    margin:0px auto 0;
+    margin:20px auto 10px;
     text-align:center;
 
     display:flex;
@@ -1079,7 +1079,7 @@
 
     flex-wrap:wrap;
 
-    font-size:18px;
+    font-size:15px;
     color:#111;
 }
 
